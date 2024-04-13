@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
@@ -10,6 +10,7 @@ import { Contact } from "./components/Contact"; // Import default export
 
 function App() {
   const observer = useRef(null);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     observer.current = new IntersectionObserver((entries) => {
@@ -34,16 +35,28 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    // Load the contact form script when component mounts
-    const script = document.createElement('script');
-    script.src = './Contact.js'; // Adjust the path if needed
-    script.async = true;
-    document.body.appendChild(script);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 1500) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener
     return () => {
-      // Clean up the script when component unmounts
-      document.body.removeChild(script);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -61,6 +74,12 @@ function App() {
         <Contact />
       </div>
       <Footer />
+      {/* Back to Top button */}
+      {showBackToTop && (
+        <div className="back-to-top" onClick={scrollToTop}>
+          Back to Top
+        </div>
+      )}
     </div>
   );
 }

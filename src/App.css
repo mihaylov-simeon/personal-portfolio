@@ -167,7 +167,7 @@ span.navbar-text {
     background-color: #ffffff;
     border-radius: 50%;
     transform: scale(0);
-	transition: 0.3s ease-in-out;
+	  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
     transform: scale(1);
@@ -627,6 +627,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-txtx a:hover {
   color: #ffd901;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #874400;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {
