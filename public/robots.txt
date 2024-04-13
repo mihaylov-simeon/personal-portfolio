@@ -1,0 +1,14 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.yourwebsite.com/sitemap.xml
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /account/
+Disallow: /contact-us/thank-you-page/
+
+Disallow: /skills/
+Disallow: /projects/
+Disallow: /contacts/
