@@ -560,13 +560,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .nav-link#projects-tabs-tab-first {
   border: none;
 }
+.nav-link#projects-tabs-tab-first:hover, .nav-link#projects-tabs-tab-second:hover, .nav-link#projects-tabs-tab-third:hover {
+  background-color: #fff;
+  color: #000;
+}
 .nav-link#projects-tabs-tab-second {
   border-left: 1px solid rgba(172, 172, 172, 0.5);
   border-right: 1px solid rgba(172, 172, 172, 0.5);
 }
+
 .nav-link#projects-tabs-tab-third {
   border: none
 }
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
