@@ -770,12 +770,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
 }
 
+.footer .footer-links {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Align links to the right */
+  margin: 20px 0 20px 0;
+}
+
 .footer .footer-links a {
   color: #fff;
   text-decoration: none;
-  margin: 0 10px 0 20px;
+  margin-right: 20px; /* Adjust margin between links */
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.footer .footer-links a:last-child {
+  margin-right: 0; /* Remove margin from the last link */
 }
 
 .footer .footer-links a:hover {
@@ -802,6 +813,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 20px;
   }
 }
+
 
 
 
