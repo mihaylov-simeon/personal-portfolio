@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.webp";
 import { ArrowDownCircleFill } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+
+const LazyImage = React.lazy(() => import('../components/LazyImage'));
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(170);
-  // eslint-disable-next-line no-unused-vars
   const [index, setIndex] = useState(1);
   const toRotate = [ "Web Developer", "Web Designer", "Graphic Designer" ];
 
@@ -68,7 +68,9 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <LazyImage />
+                  </Suspense>
                 </div>}
             </TrackVisibility>
           </Col>
