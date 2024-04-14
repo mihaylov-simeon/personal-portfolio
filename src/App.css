@@ -104,6 +104,7 @@ nav.navbar a.navbar-brand span {
     font-family: 'Centra';
     font-weight: 700;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -250,6 +251,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  span.navbar-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .social-icon a {
+    margin: 0 0 0 15px;
+  }
+}
+
 
 /************ Banner Css ************/
 .banner {
@@ -294,6 +314,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner a {
   text-decoration: none;
 }
+
 .banner button {
   color: #fff;
   font-weight: 700;
@@ -303,6 +324,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
@@ -331,6 +353,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+
+@media screen and (max-width: 1400px) {
+  .banner h1 {
+    font-size: 2.3rem;
+  }
+  .banner p {
+    color: #e3e3e3;
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+  }
+}
+
 
 @media screen and (max-width: 767px) {
   .banner {
@@ -379,7 +415,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   flex-flow: row nowrap;  
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -391,7 +427,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .circular-chart {
   display: block;
   margin: 10px auto;
-  max-width: 80%;
+  max-width: 90%;
   max-height: 250px;
 }
 
@@ -436,6 +472,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 500px) {
   .skill p {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .skill-bx {
+    padding: 50px 10px;
+    max-width: 90%;
   }
 }
 

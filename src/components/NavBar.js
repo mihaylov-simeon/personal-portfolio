@@ -27,6 +27,11 @@ export const NavBar = () => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+    // Hide the menu when a link is clicked
+    const navbarCollapse = document.getElementById('basic-navbar-nav');
+    if (navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
   }
 
   return (
@@ -51,7 +56,13 @@ export const NavBar = () => {
                 <a href="https://github.com/mihaylov-simeon" target="_blank" rel="noreferrer"><img src={navIcon2} alt="" /></a>
               </div>
               <HashLink to='#connect'>
-                <button className="vvd"><span>Contact me</span></button>
+                <button className="vvd" onClick={() => {
+                  // Hide the menu when the Contact Me button is clicked
+                  const navbarCollapse = document.getElementById('basic-navbar-nav');
+                  if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                  }
+                }}><span>Contact me</span></button>
               </HashLink>
             </span>
           </Navbar.Collapse>

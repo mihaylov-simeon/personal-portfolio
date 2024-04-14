@@ -50,7 +50,8 @@ export const Banner = () => {
               {() =>
               <div>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Simeon `} <span className="txt-rotate" dataperiod="300" data-rotate='[ "Web Developer", "Web Designer", Graphic Designer ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Simeon`} <br /> {/* Add a line break here */}
+                <span className="txt-rotate" dataperiod="300" data-rotate='[ "Web Developer", "Web Designer", Graphic Designer ]'><span className="wrap">{text}</span></span></h1>
                   <p>In the realm of digital creation, there are many skilled professional, but not all of them have the vision and client 
                     approach  – I am a web developer and designer. Grounded in both technical proficiency and design principles, 
                     I try to build online platforms with precision and purpose. My expertise lies in crafting user-friendly interfaces, 
