@@ -113,6 +113,16 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   opacity: 0.75;
   font-weight: bold;
 }
+
+@media screen and (max-width: 390px) {
+  .fa-terminal {
+    font-size: 1.7rem;
+}
+  nav.navbar a.navbar-brand span {
+      font-size: 2rem;
+  }
+}
+
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;

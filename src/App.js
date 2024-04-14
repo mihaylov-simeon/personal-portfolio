@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
@@ -9,31 +9,7 @@ import { Footer } from "./components/Footer";
 import { Contact } from "./components/Contact"; // Import default export
 
 function App() {
-  const observer = useRef(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
-
-  useEffect(() => {
-    observer.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // Handle intersection events here
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        } else {
-          entry.target.classList.remove('fade-in');
-        }
-      });
-    });
-
-    // Observe elements when they are mounted
-    document.querySelectorAll('.observe').forEach((element) => {
-      observer.current.observe(element);
-    });
-
-    // Cleanup observer when component is unmounted
-    return () => {
-      observer.current.disconnect();
-    };
-  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -64,13 +40,9 @@ function App() {
     <div className="App">
       <NavBar />
       <Banner />
-      <div className="observe">
-        <Skills />
-      </div>
-      <div className="observe">
-        <Projects />
-      </div>
-      <div className="observe" id="contact-us">
+      <Skills />
+      <Projects />
+      <div id="contact-us">
         <Contact />
       </div>
       <Footer />

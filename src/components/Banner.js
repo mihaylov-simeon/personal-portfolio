@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowDownCircleFill } from 'react-bootstrap-icons';
-import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 const LazyImage = React.lazy(() => import('../components/LazyImage'));
@@ -48,8 +47,8 @@ export const Banner = () => {
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              {() =>
+              <div>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Simeon `} <span className="txt-rotate" dataperiod="300" data-rotate='[ "Web Developer", "Web Designer", Graphic Designer ]'><span className="wrap">{text}</span></span></h1>
                   <p>In the realm of digital creation, there are many skilled professional, but not all of them have the vision and client 
@@ -66,8 +65,8 @@ export const Banner = () => {
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+              {() =>
+                <div>
                   <Suspense fallback={<div>Loading...</div>}>
                     <LazyImage />
                   </Suspense>

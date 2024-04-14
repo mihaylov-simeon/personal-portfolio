@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import astronaut from "../assets/img/astronaut-contact-img.webp";
-import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from 'emailjs-com'; // Import emailjs-com
 
@@ -60,14 +59,14 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={astronaut} alt="Contact Us"/>
+                <img src={astronaut} alt="Contact Us"/>
               }
             </TrackVisibility>
           </Col>
           <Col size={12} md={6}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              {() =>
+                <div>
                 <h2>Get In Touch</h2>
                 <form id="contact-form" onSubmit={handleSubmit}>
                   <Row>
