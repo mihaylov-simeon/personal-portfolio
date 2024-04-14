@@ -1,9 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import matsmart from "../assets/img/matsmart-img.jpg";
-import enigma from "../assets/img/enigma-img.jpg";
-import kbc from "../assets/img/kbc-test-fest-img.jpg";
-import sofrino from "../assets/img/sofrino-img.jpg";
+import matsmart from "../assets/img/matsmart-img.webp";
+import enigma from "../assets/img/enigma-img.webp";
+import kbc from "../assets/img/kbc-test-fest-img.webp";
+import sofrino from "../assets/img/sofrino-img.webp";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 

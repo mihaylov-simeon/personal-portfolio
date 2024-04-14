@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import astronaut from "../assets/img/astronaut-contact-img.png";
+import astronaut from "../assets/img/astronaut-contact-img.webp";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from 'emailjs-com'; // Import emailjs-com

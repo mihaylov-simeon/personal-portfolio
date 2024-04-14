@@ -1,18 +1,10 @@
 /************ Custom Font ************/
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
+  font-family: Centra;
+  src: url('./assets/font/CentraNo2-Bold.woff2') format('woff2'),
+       url('./assets/font/CentraNo2-Medium.woff2') format('woff2'),
+       url('./assets/font/CentraNo2-Book.woff2') format('woff2');
+  font-weight: 700, 500, 400;
 }
 
 /************ Default Css ************/
@@ -67,33 +59,19 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-
 @media (min-width:1700px) {
-	main .container {
-		max-width: 100%;
-		padding: 0 150px;
-	}
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
 }
 
 p.success {
-	color: green;
+  color: green;
 }
 
 p.danger {
-	color: red;
+  color: red;
 }
 /************ Navbar Css ************/
 nav.navbar {
@@ -167,18 +145,18 @@ span.navbar-text {
     background-color: #ffffff;
     border-radius: 50%;
     transform: scale(0);
-	  transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
     transform: scale(1);
 }
 .social-icon a img {
-	width: 40%;
-	z-index: 1;
-	transition: 0.3s ease-in-out;
+  width: 40%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 .navbar-text button {
   display: inline;
@@ -189,9 +167,9 @@ span.navbar-text {
   padding: 10px 33px;
   margin-left: 18px;
   font-size: 18px;
-	position: relative;
-	background-color: transparent;
-	transition: 0.3s ease-in-out;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 .navbar-text button span {
   z-index: 1;
@@ -212,14 +190,14 @@ span.navbar-text {
   color: #121212;
 }
 .navbar-text button:hover::before {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
-	outline: none;
+  outline: none;
   box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
@@ -231,35 +209,35 @@ nav.navbar .navbar-toggler-icon {
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-	border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
-	width: 24px;
-	position: absolute;
-	height: 2px;
-	background-color: #fff;
-	top: 0;
-	left: 0;
-	content: '';
-	z-index: 2;
-	transition: all 300ms linear;
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
 }
 nav.navbar .navbar-toggler-icon:after {
-	top: 8px;
+  top: 8px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-	transform: rotate(45deg);
-	background-color: #fff;
-	height: 2px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
-	height: 2px;
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #fff;
+  height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-	border-color: transparent;
+  border-color: transparent;
 }
 
 
@@ -267,7 +245,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0px;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner-bg.webp');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -279,7 +257,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, rgba(131, 54, 170, 0.5) -5.91%, rgba(132, 86, 1, 0.5) 111.58%);
   border-radius: 10px;
   font-size: 1.3rem;
-  margin-bottom: 16px;
+  margin: 50px 0 16px 0;
   display: inline-block;
 }
 
@@ -370,8 +348,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   max-width: 80%;
 }
 .skill h2 {
-	font-size: 3rem;
-	font-weight: 700;
+  font-size: 3rem;
+  font-weight: 700;
 }
 .skill p {
     color: #e3e3e3;
@@ -502,8 +480,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #1e1e1e;
 }
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
 }
 .project p {
@@ -541,21 +519,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
 }
 .project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #842a60 -5.91%, #ad5f01 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #842a60 -5.91%, #ad5f01 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+  width: 100% !important;
 }
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(172, 172, 172, 0.5);
+  border: 1px solid rgba(172, 172, 172, 0.5);
 }
 .nav-link#projects-tabs-tab-first {
   border: none;
@@ -684,8 +662,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 90%;
 }
 .contact h2 {
-	font-size: 2.5rem;
-	font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin: 0 0 30px 10px;
 }
 
@@ -693,78 +671,65 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   max-width: 90%;
   display: block;
   margin: 0 auto;
-}
-.contact form input, .contact form textarea {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
-  color: #fff;
-  margin: 0 0 20px 0;
-  padding: 18px 26px;
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  transition: 0.3s ease-in-out;
-}
-.contact form input:focus, .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
-}
-.contact form input::placeholder, .contact form textarea::placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-}
-.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
-  color: #121212;
-  opacity: 0.8;
-}
-.contact form button {
-  font-weight: 700;
-  color: #000;
-  background-color: #fff;
-  padding: 14px 48px;
-  font-size: 18px;
-  margin-top: 25px;
-  border-radius: 0;
   position: relative;
-  transition: 0.3s ease-in-out;
-}
-.contact form button span {
-  z-index: 1;
-  position: relative;
-}
-.contact form button:hover {
-  color: #fff;
-}
-.contact form button::before {
-  content: "";
-  background: #121212;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transition: 0.3s ease-in-out;
-}
-.contact form button:hover::before {
-  width: 100%;
 }
 
-@media screen and (max-width: 767px) {
-  .contact img {
-    display: block;
-    margin: 0 auto;
-    max-width: 60%;
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form button {
+  border: none;
+  background: #ffd901;
+  color: #000;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact form button:hover {
+  background: #f4c20d;
+}
+
+@media screen and (max-width: 768px) {
+  .contact form button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact form button {
+    font-size: 1rem;
   }
 }
 
 /************ Footer Css ************/
 .footer {
   padding: 30px 0;
-  background-image: url('./assets/img/footer-img.jpg');
+  background-image: url('./assets/img/footer-img.webp');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -837,5 +802,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 20px;
   }
 }
+
 
 
