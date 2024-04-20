@@ -26,10 +26,10 @@ export const Contact = () => {
   const sendEmail = async () => {
     try {
       const response = await emailjs.sendForm(
-        'service_i2ou9ou',
-        'template_kv6vn1w',
+        '\x73\x65\x72\x76\x69\x63\x65\x5f\x69\x32\x6f\x75\x39\x6f\x75',
+        '\x74\x65\x6d\x70\x6c\x61\x74\x65\x5f\x6b\x76\x36\x76\x6e\x31\x77',
         '#contact-form',
-        '4jDQ_CIUxXvEzKwIB'
+        '\x34\x6a\x44\x51\x5f\x43\x49\x55\x78\x58\x76\x45\x7a\x4b\x77\x49\x42',
       );
       console.log('Email sent:', response);
       return { success: true, message: 'Message sent successfully' };
