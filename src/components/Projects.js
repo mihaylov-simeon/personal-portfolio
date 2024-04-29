@@ -4,10 +4,17 @@ import matsmart from "../assets/img/matsmart-img.webp";
 import enigma from "../assets/img/enigma-img.webp";
 import kbc from "../assets/img/kbc-test-fest-img.webp";
 import sofrino from "../assets/img/sofrino-img.webp";
+import braainy from "../assets/img/braainy-logo.webp";
+import chefandgastro from "../assets/img/chef&gastro.webp";
+import decoristic from "../assets/img/decoristic-logo.webp";
+import labelle from "../assets/img/la-belle-logo.webp";
+import ntbis from "../assets/img/ntbis-logo.webp";
+import vedra from "../assets/img/vedra-logo.webp";
+
 
 export const Projects = () => {
 
-  const projects = [
+  const websites = [
     {
       title: "Company Website for Commercial Purposes",
       description: "Design & Development",
@@ -31,6 +38,62 @@ export const Projects = () => {
       description: "Collaboration Design & Development",
       imgUrl: sofrino,
       websiteUrl: "https://sofrino.eu/",
+    },
+  ];
+
+  const web = [
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Design & Development",
+      imgUrl: matsmart,
+    },
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Collaboration Design & Development",
+      imgUrl: enigma,
+    },
+    {
+      title: "Company Website for QA Testing Event",
+      description: "Design & Development",
+      imgUrl: kbc,
+    },
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Collaboration Design & Development",
+      imgUrl: sofrino,
+    },
+  ];
+
+  const designs = [
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Design & Development",
+      imgUrl: chefandgastro,
+    },
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Collaboration Design & Development",
+      imgUrl: labelle,
+    },
+    {
+      title: "Company Website for QA Testing Event",
+      description: "Design & Development",
+      imgUrl: ntbis,
+    },
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Collaboration Design & Development",
+      imgUrl: decoristic,
+    },
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Collaboration Design & Development",
+      imgUrl: braainy,
+    },
+    {
+      title: "Company Website for Commercial Purposes",
+      description: "Collaboration Design & Development",
+      imgUrl: vedra,
     },
   ];
 
@@ -61,7 +124,7 @@ export const Projects = () => {
                 <Tab.Pane eventKey="first">
                   <Row>
                     {
-                      projects.map((project, index) => {
+                      websites.map((project, index) => {
                         return (
                           <ProjectCard
                             key={index}
@@ -75,7 +138,7 @@ export const Projects = () => {
                 <Tab.Pane eventKey="second">
                   <Row>
                     {
-                      projects.map((project, index) => {
+                      web.map((project, index) => {
                         return (
                           <ProjectCard
                             key={index}
@@ -89,7 +152,7 @@ export const Projects = () => {
                 <Tab.Pane eventKey="third">
                   <Row>
                     {
-                      projects.map((project, index) => {
+                      designs.map((project, index) => {
                         return (
                           <ProjectCard
                             key={index}

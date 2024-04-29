@@ -592,8 +592,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: none;
 }
 .nav-link#projects-tabs-tab-first:hover, .nav-link#projects-tabs-tab-second:hover, .nav-link#projects-tabs-tab-third:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #ad5f01;
+  color: #ffffff;
 }
 .nav-link#projects-tabs-tab-second {
   border-left: 1px solid rgba(172, 172, 172, 0.5);
