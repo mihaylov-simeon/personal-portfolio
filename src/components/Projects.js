@@ -66,33 +66,33 @@ export const Projects = () => {
 
   const designs = [
     {
-      title: "Company Website for Commercial Purposes",
-      description: "Design & Development",
+      title: "Logo design for a cooking company",
+      description: "Design",
       imgUrl: chefandgastro,
     },
     {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
+      title: "Logo design for a fashion studio",
+      description: "Design",
       imgUrl: labelle,
     },
     {
-      title: "Company Website for QA Testing Event",
-      description: "Design & Development",
+      title: "Logo design for a technical writing company",
+      description: "Design",
       imgUrl: ntbis,
     },
     {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
+      title: "Logo design for a decor company",
+      description: "Design",
       imgUrl: decoristic,
     },
     {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
+      title: "Logo design for a tech company",
+      description: "Design",
       imgUrl: braainy,
     },
     {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
+      title: "Logo design for an accounting company",
+      description: "Design",
       imgUrl: vedra,
     },
   ];
