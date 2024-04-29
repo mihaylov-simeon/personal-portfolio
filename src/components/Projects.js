@@ -10,6 +10,7 @@ import decoristic from "../assets/img/decoristic-logo.webp";
 import labelle from "../assets/img/la-belle-logo.webp";
 import ntbis from "../assets/img/ntbis-logo.webp";
 import vedra from "../assets/img/vedra-logo.webp";
+import bggenerator from "../assets/img/background-generator.webp"
 
 
 export const Projects = () => {
@@ -43,24 +44,10 @@ export const Projects = () => {
 
   const web = [
     {
-      title: "Company Website for Commercial Purposes",
+      title: "Web application for gradient color generation",
       description: "Design & Development",
-      imgUrl: matsmart,
-    },
-    {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
-      imgUrl: enigma,
-    },
-    {
-      title: "Company Website for QA Testing Event",
-      description: "Design & Development",
-      imgUrl: kbc,
-    },
-    {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
-      imgUrl: sofrino,
+      imgUrl: bggenerator,
+      websiteUrl: "https://mihaylov-simeon.github.io/backgroundGenerator/"
     },
   ];
 
