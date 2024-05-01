@@ -836,6 +836,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
+.footer .navbar-brand {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  margin-top: 20px;
+}
+
 .footer .navbar-brand a {
   text-decoration: none;
 }
@@ -856,22 +863,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .footer .footer-links {
-  display: flex; /* Use flexbox */
-  flex-wrap: wrap; /* Allow wrapping */
-  justify-content: center; /* Align links to the right */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 20px 0 20px 0;
 }
 
 .footer .footer-links a {
   color: #fff;
   text-decoration: none;
-  margin-right: 20px; /* Adjust margin between links */
+  margin-right: 20px;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .footer .footer-links a:last-child {
-  margin-right: 0; /* Remove margin from the last link */
+  margin-right: 0;
 }
 
 .footer .footer-links a:hover {
@@ -881,6 +888,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 576px) {
   .footer .navbar-brand {
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .fa-terminal,
