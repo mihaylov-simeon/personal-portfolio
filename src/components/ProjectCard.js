@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Col, Modal, Carousel } from "react-bootstrap";
+import { FaImages } from "react-icons/fa";
 
 export const ProjectCard = ({ projects, activeTab }) => {
   const [showCarousel, setShowCarousel] = useState(false);
@@ -23,12 +24,17 @@ export const ProjectCard = ({ projects, activeTab }) => {
             <img src={project.imgUrl} alt={project.title} />
             <div className="proj-txtx">
               <h4>{project.title}</h4>
-              <span>{project.description}</span><br />
+              <span>{project.description}</span>
               {project.websiteUrl && (
                 <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
                   Visit the website
                 </a>
               )}
+              {activeTab === "second" && index === 1 &&(
+              <div className="gallery-icon">
+                <FaImages size={30} color="#fff" />
+              </div>
+            )}
             </div>
           </div>
         </Col>
