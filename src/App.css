@@ -743,10 +743,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
 }
 
+@media screen and (max-width: 1200px) {
+  .proj-txtx h4 {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .proj-txtx span {
+    padding: 0;
+  }
+  
+  .proj-txtx a {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .proj-txtx h4 {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  
+  .proj-txtx span {
+    padding: 0;
+  }
+  
+  .proj-txtx a {
+    font-size: 1rem;
+  }
+
   .project p {
     font-size: 1rem;
-    max-width: 90%;
   }
   
   .project .nav.nav-pills .nav-link {
@@ -754,13 +780,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .proj-txtx h4 {
+    font-size: 1.3rem;
+    padding: 10px;
+  }
+  .proj-txtx span {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  
+  .proj-txtx a {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
+  .proj-txtx h4 {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  .proj-txtx span {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+  
+  .proj-txtx a {
+    font-size: 1.1rem;
+  }
+
   .project p {
     font-size: 0.9rem;  
   }
 
   .project .nav.nav-pills .nav-link {
     font-size: 0.65rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .proj-txtx h4 {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .proj-txtx span {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  
+  .proj-txtx a {
+    font-size: 0.9rem;
   }
 }
 
