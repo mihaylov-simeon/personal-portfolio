@@ -513,36 +513,72 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   stroke: #f06529;
 }
 
+.circular-chart.orange:hover .circle {
+  stroke: #ff7700;
+}
+
 .circular-chart.green .circle {
   stroke: #2965f1;
+}
+
+.circular-chart.green:hover .circle {
+  stroke: #0099ff;
 }
 
 .circular-chart.blue .circle {
   stroke: #fef200;
 }
 
+.circular-chart.blue:hover .circle {
+  stroke: #ffcc00;
+}
+
 .circular-chart.r-blue .circle {
   stroke: #61DBFB;
+}
+
+.circular-chart.r-blue:hover .circle {
+  stroke: #009dff;
 }
 
 .circular-chart.j-orange .circle {
   stroke: #FB9820;
 }
 
+.circular-chart.j-orange:hover .circle {
+  stroke: #ffc800;
+}
+
 .circular-chart.s-green .circle {
   stroke: #6bb016;
+}
+
+.circular-chart.s-green:hover .circle {
+  stroke: #8cff00;
 }
 
 .circular-chart.p-yellow .circle {
   stroke: #FFD43B;
 }
 
+.circular-chart.p-yellow:hover .circle {
+  stroke: #ffbf00;
+}
+
 .circular-chart.s-blue .circle {
   stroke: #00758F;
 }
 
+.circular-chart.s-blue:hover .circle {
+  stroke: #01a8ce;
+}
+
 .circular-chart.white .circle {
   stroke: #fff;
+}
+
+.circular-chart.white:hover .circle {
+  stroke: #b4b4b4;
 }
 
 .percentage {
@@ -550,6 +586,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-family: sans-serif;
   font-size: 1.15em;
   text-anchor: middle;
+}
+
+.percentage:hover {
+  fill: #a8a8a8;
+  cursor: pointer;
 }
 
 /************ Projects Css ************/
