@@ -643,8 +643,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 1;
 }
 
-
-
 .proj-txtx h4 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -652,10 +650,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.1em;
 }
 .proj-txtx span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-style: italic;
   font-weight: 400;
-  font-size: 0.8rem;
-  padding: 5px;
+  font-size: 0.9rem;
+  padding: 10px;
 }
 
 .proj-txtx a {
@@ -696,8 +697,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: none;
 }
 
-
-
+/************ Back to Top ************/
 .back-to-top {
   position: fixed;
   bottom: 30px;

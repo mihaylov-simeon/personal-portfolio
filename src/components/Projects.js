@@ -11,7 +11,15 @@ import labelle from "../assets/img/la-belle-logo.webp";
 import ntbis from "../assets/img/ntbis-logo.webp";
 import vedra from "../assets/img/vedra-logo.webp";
 import bggen1 from "../assets/img/bg-generator-1.webp"
-import bggen2 from "../assets/img/bg-generator-2.webp"
+import mt1 from "../assets/img/mt-1.webp"
+import mt2 from "../assets/img/mt-2.webp"
+import mt3 from "../assets/img/mt-3.webp"
+import mt4 from "../assets/img/mt-4.webp"
+import mt5 from "../assets/img/mt-5.webp"
+import mt6 from "../assets/img/mt-6.webp"
+import mt7 from "../assets/img/mt-7.webp"
+import mt8 from "../assets/img/mt-8.webp"
+import mt9 from "../assets/img/mt-9.webp"
 
 
 export const Projects = () => {
@@ -80,8 +88,13 @@ export const Projects = () => {
                           title: "Gradient Color Generator",
                           description: "Instantly create gradients from two colors. View HEX, RGB, and HSL values in real-time. Explore more colors with the 'RANDOM' button.",
                           imgUrl: bggen1,
-                          screenshots: [bggen1, bggen2],
                           websiteUrl: "https://mihaylov-simeon.github.io/backgroundGenerator/",
+                        },
+                        {
+                          title: "The Movie Trailer Spot",
+                          description: "Search for your favourite movies and watch their trailers. Create a list with your favorite movie trailers and save them in your profile.",
+                          imgUrl: mt1,
+                          screenshots: [mt1, mt2, mt3, mt4, mt5, mt6, mt7, mt8, mt9],
                         },
                       ]}
                       activeTab="second"
