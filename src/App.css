@@ -73,6 +73,7 @@ p.success {
 p.danger {
   color: red;
 }
+
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -249,6 +250,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
+}
+
+@media screen and (max-width: 900px) {
+  nav.navbar {
+    padding: 12px 0;
+  }
+
+  nav.navbar .navbar-brand span {
+    font-size: 2rem;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .social-icon a {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navbar-text button {
+    padding: 8px 30px;
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 768px) {
