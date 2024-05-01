@@ -10,80 +10,11 @@ import decoristic from "../assets/img/decoristic-logo.webp";
 import labelle from "../assets/img/la-belle-logo.webp";
 import ntbis from "../assets/img/ntbis-logo.webp";
 import vedra from "../assets/img/vedra-logo.webp";
-import bggenerator from "../assets/img/background-generator.webp"
+import bggen1 from "../assets/img/bg-generator-1.webp"
+import bggen2 from "../assets/img/bg-generator-2.webp"
 
 
 export const Projects = () => {
-
-  const websites = [
-    {
-      title: "Company Website for Commercial Purposes",
-      description: "Design & Development",
-      imgUrl: matsmart,
-      websiteUrl: "https://matsmart.bg/",
-    },
-    {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
-      imgUrl: enigma,
-      websiteUrl: "https://enigmadesign-bg.com/",
-    },
-    {
-      title: "Company Website for QA Testing Event",
-      description: "Design & Development",
-      imgUrl: kbc,
-      websiteUrl: "https://mihaylov-simeon.github.io/Test-Fest-KBC/"
-    },
-    {
-      title: "Company Website for Commercial Purposes",
-      description: "Collaboration Design & Development",
-      imgUrl: sofrino,
-      websiteUrl: "https://sofrino.eu/",
-    },
-  ];
-
-  const web = [
-    {
-      title: "Web application for gradient color generation",
-      description: "Design & Development",
-      imgUrl: bggenerator,
-      websiteUrl: "https://mihaylov-simeon.github.io/backgroundGenerator/"
-    },
-  ];
-
-  const designs = [
-    {
-      title: "Logo design for a cooking company",
-      description: "Design",
-      imgUrl: chefandgastro,
-    },
-    {
-      title: "Logo design for a fashion studio",
-      description: "Design",
-      imgUrl: labelle,
-    },
-    {
-      title: "Logo design for a technical writing company",
-      description: "Design",
-      imgUrl: ntbis,
-    },
-    {
-      title: "Logo design for a decor company",
-      description: "Design",
-      imgUrl: decoristic,
-    },
-    {
-      title: "Logo design for a tech company",
-      description: "Design",
-      imgUrl: braainy,
-    },
-    {
-      title: "Logo design for an accounting company",
-      description: "Design",
-      imgUrl: vedra,
-    },
-  ];
-
   return (
     <section className="project" id="projects">
       <Container>
@@ -110,45 +41,91 @@ export const Projects = () => {
               <Tab.Content id="slideInUp">
                 <Tab.Pane eventKey="first">
                   <Row>
-                    {
-                      websites.map((project, index) => {
-                        return (
-                          <ProjectCard
-                            key={index}
-                            {...project}
-                          />
-                        )
-                      })
-                    }
+                    <ProjectCard
+                      projects={[
+                        {
+                          title: "Company Website for Commercial Purposes",
+                          description: "Design & Development",
+                          imgUrl: matsmart,
+                          websiteUrl: "https://matsmart.bg/",
+                        },
+                        {
+                          title: "Company Website for Commercial Purposes",
+                          description: "Collaboration Design & Development",
+                          imgUrl: enigma,
+                          websiteUrl: "https://enigmadesign-bg.com/",
+                        },
+                        {
+                          title: "Company Website for QA Testing Event",
+                          description: "Design & Development",
+                          imgUrl: kbc,
+                          websiteUrl: "https://mihaylov-simeon.github.io/Test-Fest-KBC/"
+                        },
+                        {
+                          title: "Company Website for Commercial Purposes",
+                          description: "Collaboration Design & Development",
+                          imgUrl: sofrino,
+                          websiteUrl: "https://sofrino.eu/",
+                        },
+                      ]}
+                      activeTab="first"
+                    />
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                   <Row>
-                    {
-                      web.map((project, index) => {
-                        return (
-                          <ProjectCard
-                            key={index}
-                            {...project}
-                          />
-                        )
-                      })
-                    }
-                  </Row>                    
+                    <ProjectCard
+                      projects={[
+                        {
+                          title: "Gradient Color Generator",
+                          description: "Instantly create gradients from two colors. View HEX, RGB, and HSL values in real-time. Explore more colors with the 'RANDOM' button.",
+                          imgUrl: bggen1,
+                          screenshots: [bggen1, bggen2],
+                          websiteUrl: "https://mihaylov-simeon.github.io/backgroundGenerator/",
+                        },
+                      ]}
+                      activeTab="second"
+                    />
+                  </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <Row>
-                    {
-                      designs.map((project, index) => {
-                        return (
-                          <ProjectCard
-                            key={index}
-                            {...project}
-                          />
-                        )
-                      })
-                    }
-                  </Row>                    
+                    <ProjectCard
+                      projects={[
+                        {
+                          title: "Logo design for a cooking company",
+                          description: "Design",
+                          imgUrl: chefandgastro,
+                        },
+                        {
+                          title: "Logo design for a fashion studio",
+                          description: "Design",
+                          imgUrl: labelle,
+                        },
+                        {
+                          title: "Logo design for a technical writing company",
+                          description: "Design",
+                          imgUrl: ntbis,
+                        },
+                        {
+                          title: "Logo design for a decor company",
+                          description: "Design",
+                          imgUrl: decoristic,
+                        },
+                        {
+                          title: "Logo design for a tech company",
+                          description: "Design",
+                          imgUrl: braainy,
+                        },
+                        {
+                          title: "Logo design for an accounting company",
+                          description: "Design",
+                          imgUrl: vedra,
+                        },
+                      ]}
+                      activeTab="third"
+                    />
+                  </Row>
                 </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
