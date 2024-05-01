@@ -30,7 +30,7 @@ export const ProjectCard = ({ projects, activeTab }) => {
                   Visit the website
                 </a>
               )}
-              {activeTab === "second" && index === 1 &&(
+              {activeTab === "second" && index === 2 &&(
               <div className="gallery-icon">
                 <FaImages size={30} color="#fff" />
               </div>

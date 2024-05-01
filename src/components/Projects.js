@@ -10,17 +10,19 @@ import decoristic from "../assets/img/decoristic-logo.webp";
 import labelle from "../assets/img/la-belle-logo.webp";
 import ntbis from "../assets/img/ntbis-logo.webp";
 import vedra from "../assets/img/vedra-logo.webp";
-import bggen1 from "../assets/img/bg-generator-1.webp"
-import mt1 from "../assets/img/mt-1.webp"
-import mt2 from "../assets/img/mt-2.webp"
-import mt3 from "../assets/img/mt-3.webp"
-import mt4 from "../assets/img/mt-4.webp"
-import mt5 from "../assets/img/mt-5.webp"
-import mt6 from "../assets/img/mt-6.webp"
-import mt7 from "../assets/img/mt-7.webp"
-import mt8 from "../assets/img/mt-8.webp"
-import mt9 from "../assets/img/mt-9.webp"
-
+import bggen1 from "../assets/img/bg-generator-1.webp";
+import mt1 from "../assets/img/mt-1.webp";
+import mt2 from "../assets/img/mt-2.webp";
+import mt3 from "../assets/img/mt-3.webp";
+import mt4 from "../assets/img/mt-4.webp";
+import mt5 from "../assets/img/mt-5.webp";
+import mt6 from "../assets/img/mt-6.webp";
+import mt7 from "../assets/img/mt-7.webp";
+import mt8 from "../assets/img/mt-8.webp";
+import mt9 from "../assets/img/mt-9.webp";
+import todo1 from "../assets/img/to-do-1.webp";
+import todo2 from "../assets/img/to-do-2.webp";
+import todo3 from "../assets/img/to-do-3.webp";
 
 export const Projects = () => {
   return (
@@ -89,6 +91,13 @@ export const Projects = () => {
                           description: "Instantly create gradients from two colors. View HEX, RGB, and HSL values in real-time. Explore more colors with the 'RANDOM' button.",
                           imgUrl: bggen1,
                           websiteUrl: "https://mihaylov-simeon.github.io/backgroundGenerator/",
+                        },
+                        {
+                          title: "Simple To-Do List",
+                          description: "Add, Edit and Remove your daily tasks with this simple to-do list.",
+                          imgUrl: todo1,
+                          screeshots: [todo1, todo2, todo3],
+                          websiteUrl: "https://mihaylov-simeon.github.io/toDoList/",
                         },
                         {
                           title: "The Movie Trailer Spot",
