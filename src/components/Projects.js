@@ -4,12 +4,6 @@ import matsmart from "../assets/img/matsmart-img.webp";
 import enigma from "../assets/img/enigma-img.webp";
 import kbc from "../assets/img/kbc-test-fest-img.webp";
 import sofrino from "../assets/img/sofrino-img.webp";
-import braainy from "../assets/img/braainy-logo.webp";
-import chefandgastro from "../assets/img/chef&gastro.webp";
-import decoristic from "../assets/img/decoristic-logo.webp";
-import labelle from "../assets/img/la-belle-logo.webp";
-import ntbis from "../assets/img/ntbis-logo.webp";
-import vedra from "../assets/img/vedra-logo.webp";
 import bggen1 from "../assets/img/bg-generator-1.webp";
 import mt1 from "../assets/img/mt-1.webp";
 import mt2 from "../assets/img/mt-2.webp";
@@ -49,9 +43,6 @@ export const Projects = () => {
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="second">Web applications</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third">Designs</Nav.Link>
                 </Nav.Item>
               </Nav>
               <Tab.Content id="slideInUp">
@@ -119,45 +110,6 @@ export const Projects = () => {
                         },
                       ]}
                       activeTab="second"
-                    />
-                  </Row>
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
-                  <Row>
-                    <ProjectCard
-                      projects={[
-                        {
-                          title: "Logo design for a cooking company",
-                          description: "Design",
-                          imgUrl: chefandgastro,
-                        },
-                        {
-                          title: "Logo design for a fashion studio",
-                          description: "Design",
-                          imgUrl: labelle,
-                        },
-                        {
-                          title: "Logo design for a technical writing company",
-                          description: "Design",
-                          imgUrl: ntbis,
-                        },
-                        {
-                          title: "Logo design for a decor company",
-                          description: "Design",
-                          imgUrl: decoristic,
-                        },
-                        {
-                          title: "Logo design for a tech company",
-                          description: "Design",
-                          imgUrl: braainy,
-                        },
-                        {
-                          title: "Logo design for an accounting company",
-                          description: "Design",
-                          imgUrl: vedra,
-                        },
-                      ]}
-                      activeTab="third"
                     />
                   </Row>
                 </Tab.Pane>
