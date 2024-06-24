@@ -23,6 +23,12 @@ import mt9 from "../assets/img/mt-9.webp";
 import todo1 from "../assets/img/to-do-1.webp";
 import todo2 from "../assets/img/to-do-2.webp";
 import todo3 from "../assets/img/to-do-3.webp";
+import note1 from "../assets/img/main-note-ok.png";
+import note2 from "../assets/img/register.png";
+import note3 from "../assets/img/login.png";
+import note4 from "../assets/img/main-update-note.png"
+import note5 from "../assets/img/main-delete.png";
+import note6 from "../assets/img/main.png";
 
 export const Projects = () => {
   return (
@@ -88,22 +94,28 @@ export const Projects = () => {
                       projects={[
                         {
                           title: "Gradient Color Generator",
-                          description: "Instantly create gradients from two colors. View HEX, RGB, and HSL values in real-time. Explore more colors with the 'RANDOM' button.",
+                          description: "HTML/CSS/JS Application, which is used to generate color gradients and take their values in different color schemes.",
                           imgUrl: bggen1,
                           websiteUrl: "https://mihaylov-simeon.github.io/backgroundGenerator/",
                         },
                         {
                           title: "Simple To-Do List",
-                          description: "Add, Edit and Remove your daily tasks with this simple to-do list.",
+                          description: "HTML/CSS/JS Application, which is used for simple task management.",
                           imgUrl: todo1,
                           screeshots: [todo1, todo2, todo3],
                           websiteUrl: "https://mihaylov-simeon.github.io/toDoList/",
                         },
                         {
                           title: "The Movie Trailer Spot",
-                          description: "Search for your favourite movies and watch their trailers. Create a list with your favorite movie trailers and save them in your profile.",
+                          description: "Backend: Java/Spring, Frontend: HTML/CSS/JS + ReactJS application for movie trailers.",
                           imgUrl: mt1,
                           screenshots: [mt1, mt2, mt3, mt4, mt5, mt6, mt7, mt8, mt9],
+                        },
+                        {
+                          title: "Notes Manager",
+                          description: "Backend: Python/Django, Frontend: HTML/CSS/JS + ReactJS application for personal note management.",
+                          imgUrl: note1,
+                          screenshots: [note2, note3, note6, note1, note5, note4],
                         },
                       ]}
                       activeTab="second"
