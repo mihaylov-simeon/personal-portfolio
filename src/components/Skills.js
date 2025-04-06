@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import 'react-multi-carousel/lib/styles.css';
-import { FaHtml5, FaCss3Alt, FaReact, FaJava, FaPython, FaGithub, FaDatabase } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaDatabase } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 
 export const Skills = () => {
