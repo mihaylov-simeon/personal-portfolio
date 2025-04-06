@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import 'react-multi-carousel/lib/styles.css';
 import { FaHtml5, FaCss3Alt, FaReact, FaJava, FaPython, FaGithub, FaDatabase } from 'react-icons/fa';
-import { SiSpring } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io';
 
 export const Skills = () => {
@@ -86,42 +85,6 @@ export const Skills = () => {
                       <FaReact x="8.7" y="8.7" className='percentage'/>
                     </svg>
                   </div>
-                  
-                  <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart j-orange">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="90, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaJava x="8.7" y="7.7" className='percentage'/>
-                    </svg>
-                  </div>
-
-                  <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart s-green">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="90, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <SiSpring x="8.7" y="8.7" className='percentage'/>
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex-wrapper">
                   <div className="single-chart">
                     <svg viewBox="0 0 36 36" className="circular-chart p-yellow">
                       <path className="circle-bg"
@@ -153,23 +116,6 @@ export const Skills = () => {
                           a 15.9155 15.9155 0 0 1 0 -31.831"
                       />
                       <FaDatabase x="8.7" y="8.7" className='percentage'/>
-                    </svg>
-                  </div>
-
-                  <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart white">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="70, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaGithub x="8.7" y="8.7" className='percentage'/>
                     </svg>
                   </div>
                 </div>
