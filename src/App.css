@@ -634,7 +634,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   text-align: center;
   z-index: 0;
 }
@@ -647,7 +647,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
