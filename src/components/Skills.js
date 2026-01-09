@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import 'react-multi-carousel/lib/styles.css';
-import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaDatabase } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io';
 
 export const Skills = () => {
   return (
@@ -10,120 +8,81 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>Embark on a journey into the vibrant world of digital craftsmanship. 
-                With an eye for detail and a passion for innovation, I weave enchanting 
-                experiences that captivate audiences. Let's sculpt immersive realms where 
-                imagination knows no bounds!</p>
+              <h2>Technologies</h2>
+
+              <p>
+                I focus on building reliable, scalable data systems that transform
+                raw data into analytics-ready assets. My core skills span distributed
+                data processing, orchestration, cloud platforms, and data storage,
+                with a strong emphasis on correctness and maintainability.
+              </p>
+
               <div className="skill-section">
+                {/* ================= Row 1 ================= */}
                 <div className="flex-wrapper">
+                  {/* Apache Spark */}
                   <div className="single-chart">
                     <svg viewBox="0 0 36 36" className="circular-chart orange">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="90, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaHtml5 x="8.5" y="9.7" className='percentage'/>
-                    </svg>
-                  </div>
-                  
-                  <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart green">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="90, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaCss3Alt x="8.5" y="9.7" className='percentage'/>
+                      <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <image href='/assets/skills/spark.svg' x="8" y="7" width="20" height="20" />
                     </svg>
                   </div>
 
+                  {/* Python */}
                   <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart blue">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="70, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <IoLogoJavascript x="8.7" y="8.7" className='percentage'/>
+                    <svg viewBox="0 0 36 36" className="circular-chart p-yellow">
+                      <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <image href="/assets/skills/python.svg" x="8" y="8" width="20" height="20" />
+                    </svg>
+                  </div>
+
+                  {/* SQL */}
+                  <div className="single-chart">
+                    <svg viewBox="0 0 36 36" className="circular-chart r-blue">
+                      <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <image href="/assets/skills/sql.svg" x="10" y="8" width="17" height="20" />
                     </svg>
                   </div>
                 </div>
+
+                {/* ================= Row 2 ================= */}
                 <div className="flex-wrapper">
+                  {/* Apache Airflow */}
                   <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart r-blue">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="60, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaReact x="8.7" y="8.7" className='percentage'/>
+                    <svg viewBox="0 0 36 36" className="circular-chart s-green">
+                      <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <image href="/assets/skills/airflow.svg" x="9" y="8" width="17" height="19" />
                     </svg>
                   </div>
+
+                  {/* AWS */}
                   <div className="single-chart">
-                    <svg viewBox="0 0 36 36" className="circular-chart p-yellow">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="70, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaPython x="8.7" y="8.7" className='percentage'/>
+                    <svg viewBox="0 0 36 36" className="circular-chart a-blue">
+                      <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <image href="/assets/skills/aws.svg" x="8" y="8" width="20" height="20" />
                     </svg>
                   </div>
-                  
+
+                  {/* PostgreSQL / Parquet */}
                   <div className="single-chart">
                     <svg viewBox="0 0 36 36" className="circular-chart s-blue">
-                      <path className="circle-bg"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <path className="circle"
-                        strokeDasharray="90, 100"
-                        d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831"
-                      />
-                      <FaDatabase x="8.7" y="8.7" className='percentage'/>
+                      <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <image href="/assets/skills/postgresql.svg" x="8" y="9" width="19" height="20" />
                     </svg>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

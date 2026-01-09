@@ -4,9 +4,9 @@ import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 
-export const Footer = () => {
+export const Footer = ({ variant = "default" }) => {
   return (
-    <footer className="footer">
+    <footer className={`footer footer--${variant}`}>
       <Container>
         <Row className="align-items-center justify-content-between">
           <Col xs={12} sm={6}>

@@ -9,9 +9,9 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(170);
+  const [delta, setDelta] = useState(130);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer" ];
+  const toRotate = [ "Data Engineer", "Software Engineer" ];
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -49,15 +49,15 @@ export const Banner = () => {
             <TrackVisibility>
               {() =>
               <div>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Simeon`} <br /> {/* Add a line break here */}
-                <span className="txt-rotate" dataperiod="300" data-rotate='[ "Web Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>In the realm of digital creation, there are many skilled professional, but not all of them have the vision and client 
-                    approach  – I am a web developer and designer. Grounded in both technical proficiency and design principles, 
-                    I try to build online platforms with precision and purpose. My expertise lies in crafting user-friendly interfaces, 
-                    optimizing performance, and ensuring compatibility across various devices and browsers. With a focus on functionality 
-                    and usability, I strive to deliver solutions that meet the needs of clients and users alike, adhering to industry standards 
-                    and best practices in web development.</p>
+                <span className="tagline">Welcome to my Website!</span>
+                <h1>{`Hi! I'm Simeon`} <br />
+                <span className="txt-rotate" dataperiod="300" data-rotate='[ "Data Engineer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>In the world of data-driven systems, technology alone is not enough — structure, correctness, and trust matter.
+                     I am a Data Engineer focused on designing and building reliable data pipelines that transform raw data into analytics-ready assets.
+                     <br></br><br></br>
+                     Grounded in strong software engineering principles, I work with scalable data platforms, batch processing, and data validation to ensure accuracy, 
+                     performance, and maintainability. My work bridges raw data and business insight, with a strong emphasis on data quality, reproducibility, 
+                     and real-world usability.</p>
                     <a href="#projects">
                       <button onClick={() => console.log('projects')}>Want to know more? <ArrowDownCircleFill size={30} /></button>
                     </a>
