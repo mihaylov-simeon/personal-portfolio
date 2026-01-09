@@ -937,7 +937,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 
-.footer--default {
+.footer {
   padding: 30px 0;
   background-image: url('./assets/img/footer-img.webp');
   background-position: center center;
@@ -945,7 +945,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 
-.footer {
+.footer--project {
   padding: 10px 0;
   background: linear-gradient(
     180deg,
@@ -1153,6 +1153,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .overview-content h2 {
   margin-left: 15px;
+}
+
+
+/************ Back to Top ************/
+.view-project-btn {
+  background-color: #d36200;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.view-project-btn:hover {
+  background-color: #000000;
+  color: #fff;
 }
 
 /* =========================
