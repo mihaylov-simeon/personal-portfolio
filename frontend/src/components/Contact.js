@@ -25,7 +25,7 @@ export const Contact = () => {
 
   const sendEmail = async () => {
     try {
-      const res = await fetch("http://localhost:5050/api/contact", {
+      const res = await fetch("https://personal-portfolio-backend-234p.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formDetails),
