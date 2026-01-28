@@ -59,7 +59,7 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-@media (min-width:1700px) {
+@media screen and (min-width:1700px) {
   main .container {
     max-width: 100%;
     padding: 0 150px;
@@ -442,7 +442,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   justify-content: center;
   flex-flow: row nowrap;  
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -483,6 +483,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 100px 30px;
     max-width: 90%;
   }
+
+
+  .flex-wrapper {
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -494,11 +499,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .skill p {
     font-size: 1rem;
   }
+
+
+  .flex-wrapper {
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .skill p {
     font-size: 0.9rem;
+  }
+
+  .flex-wrapper {
+  max-width: 90%;
   }
 }
 
@@ -506,6 +520,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .skill-bx {
     padding: 50px 10px;
     max-width: 90%;
+  }
+
+  .flex-wrapper {
+  max-width: 90%;
   }
 }
 
@@ -576,6 +594,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   background-color: #1e1e1e;
 }
+
 .project h2 {
   font-size: 45px;
   font-weight: 700;
@@ -704,7 +723,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 400;
   font-size: 1.2rem;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .proj-txtx a {
@@ -713,14 +732,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 1.1rem;
   font-weight: 700;
   background: linear-gradient(90.21deg, #fb4a04 -5.91%, #fb8a00 111.58%);
-  padding: 10px;
+  padding: 13px;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
 }
 
 .proj-txtx a:hover {
   color: #6a2e00;
-  background-color: #fefefe;
+  background: #fefefe;
   transition: 0.3s ease-in-out;
 }
 
@@ -772,32 +791,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media screen and (max-width: 1200px) {
-  .proj-txtx h4 {
-    font-size: 1rem;
-    padding: 10px;
-  }
+
   .proj-txtx span {
-    padding: 0;
+    padding: 0 15px 0 15px;
+    font-size: 1rem;
   }
   
+  .proj-title {
+    font-size: 1.1rem;
+  }
+
   .proj-txtx a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .proj-txtx h4 {
-    font-size: 0.9rem;
-    padding: 0;
-  }
-  
+
   .proj-txtx span {
     font-size: 0.7rem;
-    padding: 0;
+    padding: 0 15px 0 15px;;
   }
   
   .proj-txtx a {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: 10px;
   }
 
@@ -810,19 +827,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   .proj-txtx h4 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 10px;
   }
   .proj-txtx span {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 0;
   }
   
   .proj-txtx a {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
+
+  .project p {
+    font-size: 0.9rem;  
+  }
+
+  .project .nav.nav-pills .nav-link {
+    font-size: 0.65rem;
+  }
+
+  #projects-tabs-tabpane-first > div > div {
+    padding: 20px;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -846,7 +876,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .project .nav.nav-pills .nav-link {
     font-size: 0.65rem;
   }
+
+  #projects-tabs-tabpane-first > div > div {
+    padding: 20px;
+  }
 }
+
 @media screen and (max-width: 350px) {
   .proj-txtx h4 {
     font-size: 0.9rem;
@@ -859,6 +894,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   
   .proj-txtx a {
     font-size: 0.9rem;
+  }
+
+  #projects-tabs-tabpane-first > div > div {
+    padding: 30px;
   }
 }
 
@@ -922,6 +961,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 768px) {
   .contact form button {
     width: 100%;
+  }
+
+  .contact img {
+    margin-bottom: 30px;
+    width: 80%;
   }
 }
 
@@ -1082,7 +1126,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-size: 3rem;
   font-weight: 800;
-  text-align: center;
+  text-align: left;
   pointer-events: none;
 }
 
@@ -1184,43 +1228,71 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.6;
   padding: 16px;
   margin-bottom: 30px;
+  text-align: left;
 }
+
+/* =========================
+   ARCHITECTURE SECTION
+========================= */
 
 .architecture-section {
   padding: 100px 0;
-  /* background: #2b2b2b; */
-  background: linear-gradient(180deg,rgba(26, 26, 26, 1) 0%, rgba(46, 46, 46, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(46, 46, 46, 1) 100%
+  );
+  overflow: hidden; /* ⬅️ critical: prevents horizontal scroll */
 }
+
+/* =========================
+   HEADINGS
+========================= */
 
 .architecture-section .heading-p {
   font-size: 7rem;
   text-align: right;
   color: #424242;
   text-transform: uppercase;
-  overflow: hidden;
   margin: 0 30px -50px 0;
   transition: 0.3s ease-in-out;
+  white-space: nowrap;
 }
 
 .architecture-section .heading-p:nth-child(1) {
   margin-top: -100px;
 }
+
 .architecture-section .heading-p:nth-child(2) {
   margin-bottom: 50px;
 }
 
 .architecture-section:hover .heading-p {
   color: #bebebe;
-  transition: 0.3s ease-in-out;
 }
+
+/* =========================
+   CANVAS (FLEXIBLE)
+========================= */
 
 .architecture-canvas {
   position: relative;
-  width: 1800px;
-  height: 520px;
+  width: 100%;
+  max-width: 1800px;
+  aspect-ratio: 1800 / 520; /* ⬅️ keeps proportions */
   margin: 0 auto;
+  transform-origin: top center;
 }
 
+.architecture-canvas {
+  transform: scale(0.8);
+}
+
+@media screen and (max-width: 1650px) {
+  .architecture-section {
+    display: none;
+  }
+}
 
 /* ======================
    MODULE BASE
@@ -1493,6 +1565,21 @@ ROW CONTENT
   )
 }
 
+@media screen and (max-width: 1710px) {
+.spark-ghost h2 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+.spark-card {
+    font-size: 1.1rem;
+  }
+
+.spark-section {
+    gap: 40px;
+  }
+}
 
 /* ------------------------
 YOY LOGIC
@@ -1626,7 +1713,6 @@ ROW CONTENT
   )
 }
 
-
 /* ========================
     ANALYSIS SECTION
 ======================== */
@@ -1756,6 +1842,33 @@ ROW CONTENT
     color: #9a9a9a;
 }
 
+
+@media screen and (max-width: 1710px) {
+.yoy-ghost h2 {
+    font-size: 5rem;
+    line-height: 0.9;
+    margin-bottom: 15px;
+  }
+  
+  .analysis-ghost h2 {
+      font-size: 5.5rem;
+      line-height: 0.9;
+      margin-bottom: 15px;
+    }
+
+  .analysis-table-img {
+    transform: scale(0.8);
+  }
+
+  .analysis-card {
+    font-size: 1.1rem;
+  }
+
+  .analysis-chart-img {
+    transform: scale(0.8);
+  }
+}
+
 /* ========================
     ANALYSIS TAKEAWAY
 ======================== */
@@ -1811,4 +1924,357 @@ ROW CONTENT
 .takeaway-section:hover h2 {
   color: #bebebe;
   transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1710px) {
+  .takeaway-ghost h2 {
+      font-size: 5.5rem;
+      line-height: 0.9;
+      margin-bottom: 15px;
+    }
+  
+  .takeaway-card {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .takeaway-ghost h2 {
+      font-size: 5.5rem;
+      line-height: 0.9;
+      margin-bottom: 15px;
+    }
+  
+  .takeaway-card {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+
+  .overview-section {
+    display: block;
+    padding: 150px 30px 30px 30px;
+  }
+
+  .overview-title {
+    text-align: center;
+  }
+  /* Kill all complex grids */
+  .spark-section,
+  .yoy-section,
+  .analysis-section,
+  .takeaway-section {
+    display: block;
+    padding: 30px 30px;
+  }
+
+  .yoy-section {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  /* Rows become normal blocks */
+  .spark-content,
+  .yoy-content,
+  .analysis-content,
+  .takeaway-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .analysis-content,
+  .takeaway-content {
+    margin-top: 0;
+  }
+
+  .spark-content {
+    margin-bottom: 30px;
+  }
+
+  .analysis-ghost {
+    order: -1;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .analysis-text {
+    order: 1;
+    text-align: center;
+  }
+  
+  .spark-list li, 
+  .yoy-list li,
+  .analysis-list li {
+    margin-left: 0;
+    color: rgb(255, 129, 2);
+    text-indent: 0;
+  } 
+
+  .spark-list li::before, 
+  .yoy-list li::before,
+  .analysis-list li::before {
+    content: "";
+    left: 0;
+  } 
+
+  .spark-text,
+  .yoy-text,
+  .analysis-card,
+  .analysis-explanation,
+  .analysis-explanation-chart,
+  .takeaway-card {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: unset;
+    grid-column: unset;
+    text-align: center;
+  }
+
+  .spark-ghost {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Text containers */
+  .spark-text,
+  .yoy-text,
+  .analysis-explanation,
+  .analysis-explanation-chart,
+  .takeaway-card {
+    order: 1;
+    text-align: center;
+  }
+
+  /* Images centered & fluid */
+  .analysis-table-img,
+  .analysis-chart-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .overview-content 
+  .overview-card, 
+  .overview-btn-wrapper {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .overview-content h2 {
+    margin-left: 0;
+  }
+  p,
+  .spark-card,
+  .yoy-card,
+  .analysis-card {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* Remove decorative dividers */
+  .spark-content hr,
+  .yoy-content hr,
+  .analysis-content hr,
+  .takeaway-content hr {
+    display: none;
+  }
+
+  .analysis-table-img {
+    filter: grayscale(0%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  /* =========================
+     GLOBAL GRID STACKING
+  ========================= */
+
+  .overview-section,
+  .spark-section,
+  .yoy-section,
+  .analysis-section,
+  .takeaway-section {
+    min-height: auto;
+  }
+
+  .spark-content,
+  .yoy-content,
+  .analysis-content,
+  .takeaway-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .spark-content {
+    margin-bottom: 0;
+  }
+
+  .analysis-section {
+    padding-bottom: 5px;
+  }
+
+  .takeaway-section {
+    padding-top: 5px;
+  }
+
+  /* =========================
+     HEADING FIRST (ORDER)
+  ========================= */
+
+  .spark-ghost,
+  .yoy-ghost,
+  .analysis-card-title,
+  .takeaway-card-title {
+    order: -1;
+    text-align: center;
+    justify-self: center;
+  }
+
+  /* =========================
+     HEADING SIZE REDUCTION
+  ========================= */
+
+  .spark-ghost h2,
+  .yoy-ghost h2,
+  .analysis-card-title h2,
+  .takeaway-card-title h2 {
+    font-size: 3.4rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  /* =========================
+     TEXT BLOCKS
+  ========================= */
+
+  .spark-text,
+  .yoy-text,
+  .analysis-card,
+  .analysis-explanation-table,
+  .analysis-explanation-chart,
+  .takeaway-card {
+    max-width: 100%;
+    justify-self: start;
+    margin-bottom: 24px;
+  }
+
+  .spark-card,
+  .yoy-card,
+  .analysis-card,
+  .analysis-explanation-table,
+  .analysis-explanation-chart,
+  .takeaway-card {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* =========================
+     OVERVIEW SECTION
+  ========================= */
+
+  .overview-section {
+    grid-template-columns: 1fr;
+    padding-top: var(--navbar-height);
+  }
+
+  .overview-left {
+    min-height: 40vh;
+  }
+
+  .overview-title {
+    font-size: 2rem;
+    padding: 0 16px;
+  }
+
+  .overview-right {
+    padding: 40px 24px;
+  }
+
+  /* =========================
+     ARCHITECTURE SECTION
+  ========================= */
+
+  .architecture-section {
+    padding: 60px 0;
+    overflow-x: hidden;
+  }
+
+  .architecture-section .heading-p {
+    font-size: 3rem;
+    text-align: left;
+    margin: 0 16px 20px 16px;
+  }
+
+  .architecture-canvas {
+    transform: scale(0.7);
+    transform-origin: top left;
+    width: 100%;
+    height: auto;
+  }
+
+  /* =========================
+     ANALYSIS IMAGES
+  ========================= */
+
+  .analysis-table-img,
+  .analysis-chart-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .analysis-section {
+    padding: 40px 24px;
+  }
+
+  .analysis-card-title {
+    margin-bottom: 0;
+   }
+
+  .analysis-card-title h2 {
+    justify-self: center;
+    line-height: 0.9;
+    margin-bottom: 5px;
+   }
+  
+  .analysis-content {
+    margin-top: 0;
+  }
+
+  /* =========================
+     TAKEAWAY SECTION
+  ========================= */
+
+  .takeaway-content {
+    padding: 0 24px;
+  }
+
+  /* =========================
+     DIVIDERS
+  ========================= */
+
+  .spark-content hr,
+  .yoy-content hr,
+  .analysis-content hr,
+  .takeaway-content hr {
+    margin-top: 40px;
+    height: 20px;
+  }
 }

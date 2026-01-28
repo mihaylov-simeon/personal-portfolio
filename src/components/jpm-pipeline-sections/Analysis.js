@@ -35,8 +35,8 @@ export const Analysis = () => {
             }
             right={
                 <p className="analysis-card-title">
-                <h2>PIPELINE</h2>
-                <h2>ANALYSIS</h2>
+                    <h2>PIPELINE</h2>
+                    <h2>ANALYSIS</h2>
                 </p>
             }
             />
@@ -64,6 +64,8 @@ export const Analysis = () => {
                 </div>
             }
         />
+
+        <div className="analysis-divider" />
 
         <AnalysisBlock className="analysis-matplotlib"
             right={

@@ -56,9 +56,11 @@ export const Overview = () => {
             the insights derived from the processed data. The diagram highlights the YoY % Change and 
             YoY Acceleration metrics.
           </p>
-          <button className="view-project-btn" onClick={() => window.open("https://github.com/mihaylov-simeon/JPMC-financial-statements-pipeline", "_blank")}>
-            View Project on Github
-          </button>
+          <div className="overview-btn-wrapper">
+            <button className="view-project-btn" onClick={() => window.open("https://github.com/mihaylov-simeon/JPMC-financial-statements-pipeline", "_blank")}>
+              View Project on Github
+            </button>
+          </div>
         </div>
       </div>
 

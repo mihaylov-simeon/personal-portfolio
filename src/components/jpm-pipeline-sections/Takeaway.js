@@ -1,14 +1,13 @@
 const TakeawayBlock = ({ left, right }) => {
   return (
     <div className="takeaway-content">
-      <div className="takeaway-text">
+      <div className="takeaway-ghost">
         {left}
       </div>
-      
-      <div className="takeaway-ghost">
+
+      <div className="takeaway-text">
         {right}
-      </div>
-      
+      </div>      
       <hr />
     </div>
   );

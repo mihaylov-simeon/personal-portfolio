@@ -1,7 +1,7 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://www.smcodelab.com/sitemap.xml
 
 Disallow: /admin/
 Disallow: /login/

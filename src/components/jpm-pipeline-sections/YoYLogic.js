@@ -2,13 +2,16 @@ const YoYBlock = ({ title, subtitle, children }) => {
   return (
     <div className="yoy-content">
       <div className="yoy-ghost">
-        {title && <h2>{title}</h2>}
-        {subtitle && <h2>{subtitle}</h2>}
+        {title && 
+          <h2>{title}</h2>
+        }
+        {subtitle && 
+          <h2>{subtitle}</h2>
+        }
       </div>
       <div className="yoy-text">
         {children}
       </div>
-
       <hr />
     </div>
   );
