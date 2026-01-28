@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowDownCircleFill } from 'react-bootstrap-icons';
 import TrackVisibility from 'react-on-screen';
 
-const LazyImage = React.lazy(() => import('../components/LazyImage'));
+const LazyImage = React.lazy(() => import('./LazyImage'));
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
