@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
 const app = express();
 
@@ -14,29 +14,14 @@ app.use(cors());
 app.use(express.json());
 
 /* =========================
-   MAIL TRANSPORT
+   RESEND CLIENT
 ========================= */
 
-const contactEmail = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // must be false for port 587
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // 16-char App Password
-  },
-  connectionTimeout: 10_000,
-  greetingTimeout: 10_000,
-  socketTimeout: 10_000,
-});
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-contactEmail.verify((error) => {
-  if (error) {
-    console.error("Email transport error:", error);
-  } else {
-    console.log("Email server is ready to send messages");
-  }
-});
+/* =========================
+   HEALTH CHECK
+========================= */
 
 app.get("/healthz", (req, res) => {
   res.status(200).send("OK");
@@ -50,6 +35,7 @@ app.post("/api/contact", async (req, res) => {
   try {
     const { firstName, lastName, email, phone, message } = req.body;
 
+    // Basic validation
     if (!email || !message) {
       return res.status(400).json({
         success: false,
@@ -59,10 +45,10 @@ app.post("/api/contact", async (req, res) => {
 
     const name = `${firstName || ""} ${lastName || ""}`.trim();
 
-    const mailOptions = {
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-      to: process.env.CONTACT_TO,
-      replyTo: email,
+    await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: [process.env.CONTACT_TO],
+      reply_to: email,
       subject: "Contact Form Submission - Portfolio",
       html: `
         <p><strong>Name:</strong> ${name || "-"}</p>
@@ -71,9 +57,7 @@ app.post("/api/contact", async (req, res) => {
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
-    };
-
-    await contactEmail.sendMail(mailOptions);
+    });
 
     res.status(200).json({
       success: true,
@@ -81,6 +65,7 @@ app.post("/api/contact", async (req, res) => {
     });
   } catch (error) {
     console.error("Send mail error:", error);
+
     res.status(500).json({
       success: false,
       message: "Failed to send message",
