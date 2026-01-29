@@ -484,7 +484,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     max-width: 90%;
   }
 
-
   .flex-wrapper {
     max-width: 90%;
   }
@@ -596,7 +595,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project h2 {
-  font-size: 45px;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
 }
@@ -844,6 +843,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   
   .project .nav.nav-pills .nav-link {
     font-size: 0.9rem;
+  }
+
+  .skill h2,
+  .project h2,
+  .contact h2 {
+    font-size: 2.5rem;
   }
 }
 
