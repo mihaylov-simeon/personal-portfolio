@@ -46,7 +46,7 @@ app.post("/api/contact", async (req, res) => {
     const name = `${firstName || ""} ${lastName || ""}`.trim();
 
     await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Portfolio Contact <contact@smcodelab.com>",
       to: [process.env.CONTACT_TO],
       reply_to: email,
       subject: "Contact Form Submission - Portfolio",
