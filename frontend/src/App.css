@@ -1114,6 +1114,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Additional pages ************/
 
+/************ JPM Pipeline ****************/
+
 :root {
   --navbar-height: 95px;
 }
@@ -1267,7 +1269,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     rgba(26, 26, 26, 1) 0%,
     rgba(46, 46, 46, 1) 100%
   );
-  overflow: hidden; /* ⬅️ critical: prevents horizontal scroll */
+  overflow: hidden;
 }
 
 /* =========================
@@ -1304,7 +1306,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   width: 100%;
   max-width: 1800px;
-  aspect-ratio: 1800 / 520; /* ⬅️ keeps proportions */
+  aspect-ratio: 1800 / 520;
   margin: 0 auto;
   transform-origin: top center;
 }
@@ -2111,7 +2113,6 @@ ROW CONTENT
     line-height: 1.7;
   }
 
-  /* Remove decorative dividers */
   .spark-content hr,
   .yoy-content hr,
   .analysis-content hr,
@@ -2324,6 +2325,916 @@ ROW CONTENT
   .yoy-ghost h2,
   .analysis-card-title h2,
   .takeaway-card-title h2 {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+}
+
+
+/************ Streaming Pipeline ************/
+
+.overview-left-stream {
+  position: relative;
+  background-image: url("assets/img/streaming-pipeline-code.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* =========================
+   ARCHITECTURE SECTION
+========================= */
+
+.architecture-section {
+  padding: 100px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 26, 1) 0%,
+    rgba(46, 46, 46, 1) 100%
+  );
+  overflow: hidden;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.architecture-section .heading-p-stream {
+  font-size: 7rem;
+  text-align: right;
+  color: #424242;
+  text-transform: uppercase;
+  margin: 0 30px -50px 0;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.architecture-section .heading-p-stream:nth-child(1) {
+  margin-top: -100px;
+}
+
+.architecture-section .heading-p-stream:nth-child(2) {
+  margin-bottom: 50px;
+}
+
+.architecture-section:hover .heading-p-stream {
+  color: #bebebe;
+}
+
+/* =========================
+   CANVAS (FLEXIBLE)
+========================= */
+
+.architecture-canvas-stream {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  aspect-ratio: 1800 / 520;
+  margin: 0 auto;
+  transform-origin: top center;
+}
+
+.architecture-canvas-stream {
+  transform: scale(0.8);
+}
+
+@media screen and (max-width: 1650px) {
+  .architecture-section {
+    display: none;
+  }
+}
+
+/* ======================
+   MODULE BASE
+====================== */
+
+.module {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ======================
+   MODULE POSITIONS
+====================== */
+
+.raw-data-stream {
+  width: 160px;
+  height: 300px;
+  left: 0;
+  top: 110px;
+  background-image: url("/public/assets/architecture2/streaming-bolt.svg");
+}
+
+.spark-etl-stream {
+  width: 220px;
+  height: 300px;
+  left: 230px;
+  top: 110px;
+  background-image: url("/public/assets/architecture2/spark-stream.svg");
+}
+
+.bronze-layer-stream {
+  width: 320px;
+  height: 500px;
+  left: 480px;
+  top: 10px;
+  background-image: url("/public/assets/architecture2/bronze-stream.svg");
+}
+
+.silver-layer-stream {
+  width: 320px;
+  height: 500px;
+  left: 800px;
+  top: 10px;
+  background-image: url("/public/assets/architecture2/silver-stream.svg");
+}
+
+.gold-layer-stream {
+  width: 320px;
+  height: 500px;
+  left: 1120px;
+  top: 10px;
+  background-image: url("/public/assets/architecture2/gold-stream.svg");
+}
+
+.pandas-layer-stream {
+  width: 220px;
+  height: 300px;
+  left: 1480px;
+  top: 105px;
+  background-image: url("/public/assets/architecture2/stream-analytics.svg");
+}
+
+/* ======================
+   ARROWS
+====================== */
+
+.architecture-arrows-stream {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.architecture-arrows-stream line {
+  stroke: #8a909aff;
+  stroke-width: 3.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+/* ====================================
+   ARCHITECTURE SECTION SCALING EFFECTs
+==================================== */
+
+.raw-data-stream,
+.spark-etl-stream,
+.bronze-layer-stream,
+.silver-layer-stream,
+.gold-layer-stream,
+.pandas-layer-stream {
+  transition: 0.3s ease-in-out;
+}
+
+.raw-data-stream:hover,
+.spark-etl-stream:hover,
+.bronze-layer-stream:hover,
+.silver-layer-stream:hover,
+.gold-layer-stream:hover,
+.pandas-layer-stream:hover {
+  scale: 1.1;
+  transition: 0.3s ease-in-out;
+}
+
+.raw-data-stream:hover ~ .architecture-arrows-stream .raw-spark-stream {
+  stroke-width: 2.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+.spark-etl-stream:hover ~ .architecture-arrows-stream .spark-bronze-stream {
+  stroke-width: 2.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+.bronze-layer-stream:hover ~ .architecture-arrows-stream .bronze-silver-stream {
+  stroke-width: 2.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+.silver-layer-stream:hover ~ .architecture-arrows-stream .silver-gold-stream {
+  stroke-width: 2.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+.gold-layer-stream:hover ~ .architecture-arrows-stream .gold-pandas-stream {
+  stroke-width: 2.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+.architecture-description-wrapper p {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* =========================
+  SPARK SECTION LAYOUT
+========================= */
+
+.spark-section-stream {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  min-height: 100vh;
+  padding: 80px 80px 0 80px;
+  gap: 80px;
+  background: linear-gradient(
+    180deg,
+    #2e2e2e 0%,
+    #353535 35%,
+    #3a3a3a 55%,
+    #202020 90%
+  );
+}
+
+
+/* =========================
+ROW CONTENT
+========================= */
+
+.spark-content-stream {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  position: relative;
+  transition: 0.7s ease-in-out;
+}
+
+.spark-content-stream:hover:nth-child(1),
+.spark-content-stream:hover:nth-child(2),
+.spark-content-stream:hover:nth-child(3) {
+  scale: 1.01;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-text-stream {
+  grid-column: 1;
+  max-width: 720px;
+}
+
+/* =========================
+   GHOST HEADINGS
+========================= */
+
+.spark-ghost-stream {
+  grid-column: 2;
+  text-align: right;
+  pointer-events: none;
+}
+
+.spark-ghost-stream h2 {
+  font-size: 7rem;
+  line-height: 0.95;
+  margin: 0;
+  color: #505050;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-ghost-stream h2:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+.spark-content-stream:hover:nth-child(1) h2 {
+  color: #cd7f32;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-content-stream:hover:nth-child(2) h2 {
+  color: #c4c4c4;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-content-stream:hover:nth-child(3) h2 {
+  color: #a57c00;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-ghost-stream h2 + h2 {
+  margin-top: -20px;
+}
+
+/* =========================
+   TEXT STYLES
+========================= */
+
+.spark-card-stream {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.spark-content-stream hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 30px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #676767,
+    transparent
+  )
+}
+
+@media screen and (max-width: 1710px) {
+.spark-ghost-stream h2 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+.spark-card-stream {
+    font-size: 1.1rem;
+  }
+
+.spark-section-stream {
+    gap: 40px;
+  }
+}
+
+/* ========================
+    ANALYSIS SECTION
+======================== */
+.analysis-section-stream {
+  display: grid;
+  min-height: 100vh;
+  padding: 0 90px 0 90px;
+  background: linear-gradient(
+    180deg,
+    #202020 0%,
+    #353535 35%,
+    #3a3a3a 55%,
+    #202020 100%
+  );
+}
+
+.analysis-section-stream:hover .analysis-card-title-stream h2 {
+  color: #bebebe;
+  transition: 0.3s ease-in-out;
+}
+
+.analysis-content-stream {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin-top: 80px;
+}
+
+
+.analysis-content-stream hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 30px;
+  margin-top: 100px;
+  justify-self: stretch;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #676767,
+    transparent
+  )
+}
+
+.analysis-card-stream {
+  font-size: 1.2rem;
+  max-width: 730px;
+}
+
+.analysis-card-title-stream h2 {
+  font-size: 7rem;
+  line-height: 0.95;  
+  margin: 0;
+  color: #505050;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  justify-self: end;
+}
+
+.analysis-explanation-table-stream {
+  font-size: 1.2rem;
+  max-width: 730px;
+  justify-self: end;
+}
+
+.analysis-table-img-stream {
+  filter: grayscale(100%);
+  max-width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.analysis-table-img-stream:hover {
+  filter: grayscale(0%);
+  scale: 1.05;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes animate{
+  0%,100%{
+    left:0px;
+  }
+  
+  50%{
+    left:calc(100% - 300px);
+  }
+}
+
+.analysis-chart-img-stream {
+  position: relative;
+  display: block;
+  width: 90%;
+  transition: 0.5s ease-in-out;
+  border: none;
+  border-radius: 30px;
+}
+
+.analysis-chart-img-stream:hover {
+  scale: 1.05;
+  transition: 0.3s ease-in-out;
+  box-shadow:
+  0 0 0 1px rgba(252, 139, 0, 0.1),
+  0 5px 30px rgba(255, 128, 0, 0.4);
+  border: none;
+  border-radius: 60px;
+}
+
+.analysis-explanation-chart-stream {
+  justify-self: start;
+  max-width: 730px;
+}
+
+.analysis-list-stream {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.analysis-list-stream li {
+  position: relative;
+  margin-left: 28px;
+  margin-bottom: 10px;
+  text-indent: 30px;
+}
+
+.analysis-list-stream li::before {
+    content: "→";
+    position: absolute;
+    left: -28px;
+    color: #9a9a9a;
+}
+
+
+@media screen and (max-width: 1710px) {
+  
+  .analysis-ghost-stream h2 {
+      font-size: 5.5rem;
+      line-height: 0.9;
+      margin-bottom: 15px;
+    }
+
+  .analysis-table-img-stream {
+    transform: scale(0.8);
+  }
+
+  .analysis-card-stream {
+    font-size: 1.1rem;
+  }
+
+  .analysis-chart-img-stream {
+    transform: scale(0.8);
+  }
+}
+
+/* ========================
+    ANALYSIS TAKEAWAY
+======================== */
+
+.takeaway-section-stream {
+  display: grid;
+
+  background: linear-gradient(
+    180deg,
+    #202020 0%,
+    #353535 35%,
+    #353535 55%,
+    #202020 100%
+  );
+}
+
+.takeaway-content-stream {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 90px 0 90px;
+  margin-top: 80px;
+  justify-items: center;
+}
+
+.takeaway-content-stream hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 30px;
+  margin-top: 100px;
+  justify-self: stretch;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #676767,
+    transparent
+  )
+}
+
+.takeaway-card-stream {
+  font-size: 1.2rem;
+  max-width: 730px;
+  justify-self: end;
+}
+
+.takeaway-card-title-stream h2 {
+  font-size: 7rem;
+  line-height: 0.95;
+  margin: 0;
+  color: #505050;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.takeaway-section-stream:hover h2 {
+  color: #bebebe;
+  transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1710px) {
+  .takeaway-ghost-stream h2 {
+      font-size: 5.5rem;
+      line-height: 0.9;
+      margin-bottom: 15px;
+    }
+  
+  .takeaway-card-stream {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .takeaway-ghost-stream h2 {
+      font-size: 5.5rem;
+      line-height: 0.9;
+      margin-bottom: 15px;
+    }
+  
+  .takeaway-card-stream {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+
+  .overview-section-stream {
+    display: block;
+    padding: 150px 30px 30px 30px;
+  }
+
+  .overview-title-stream {
+    text-align: center;
+  }
+  /* Kill all complex grids */
+  .spark-section-stream,
+  .analysis-section-stream,
+  .takeaway-section-stream {
+    display: block;
+    padding: 30px 30px;
+  }
+
+  /* Rows become normal blocks */
+  .spark-content-stream,
+  .analysis-content-stream,
+  .takeaway-content-stream {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .analysis-content-stream,
+  .takeaway-content-stream {
+    margin-top: 0;
+  }
+
+  .spark-content-stream {
+    margin-bottom: 30px;
+  }
+
+  .analysis-ghost-stream {
+    order: -1;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .analysis-text-stream {
+    order: 1;
+    text-align: center;
+  }
+  
+  .spark-list-stream li, 
+  .analysis-list-stream li {
+    margin-left: 0;
+    color: rgb(255, 129, 2);
+    text-indent: 0;
+  } 
+
+  .spark-list-stream li::before, 
+  .analysis-list-stream li::before {
+    content: "";
+    left: 0;
+  } 
+
+  .spark-text-stream,
+  .analysis-card-stream,
+  .analysis-explanation-stream,
+  .analysis-explanation-chart-stream,
+  .takeaway-card-stream {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: unset;
+    grid-column: unset;
+    text-align: center;
+  }
+
+  .spark-ghost-stream {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Text containers */
+  .spark-text-stream,
+  .analysis-explanation-stream,
+  .analysis-explanation-chart-stream,
+  .takeaway-card-stream {
+    order: 1;
+    text-align: center;
+  }
+
+  /* Images centered & fluid */
+  .analysis-table-img-stream,
+  .analysis-chart-img-stream {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .overview-content-stream, 
+  .overview-card-stream, 
+  .overview-btn-wrapper-stream {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .overview-content-stream h2 {
+    margin-left: 0;
+  }
+  p,
+  .spark-card-stream,
+  .analysis-card-stream {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* Remove decorative dividers */
+  .spark-content-stream hr,
+  .analysis-content-stream hr,
+  .takeaway-content-stream hr {
+    display: none;
+  }
+
+  .analysis-table-img-stream {
+    filter: grayscale(0%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  /* =========================
+     GLOBAL GRID STACKING
+  ========================= */
+
+  .overview-section-stream,
+  .spark-section-stream,
+  .analysis-section-stream,
+  .takeaway-section-stream {
+    min-height: auto;
+  }
+
+  .spark-content-stream,
+  .analysis-content-stream,
+  .takeaway-content-stream {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .spark-content-stream {
+    margin-bottom: 0;
+  }
+
+  .analysis-section-stream {
+    padding-bottom: 5px;
+  }
+
+  .takeaway-section-stream {
+    padding-top: 5px;
+  }
+
+  /* =========================
+     HEADING FIRST (ORDER)
+  ========================= */
+
+  .spark-ghost-stream,
+  .analysis-card-title-stream,
+  .takeaway-card-title-stream {
+    order: -1;
+    text-align: center;
+    justify-self: center;
+  }
+
+  /* =========================
+     HEADING SIZE REDUCTION
+  ========================= */
+
+  .spark-ghost-stream h2,
+  .analysis-card-title-stream h2,
+  .takeaway-card-title-stream h2 {
+    font-size: 3.4rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  /* =========================
+     TEXT BLOCKS
+  ========================= */
+
+  .spark-text-stream,
+  .analysis-card-stream,
+  .analysis-explanation-table-stream,
+  .analysis-explanation-chart-stream,
+  .takeaway-card-stream {
+    max-width: 100%;
+    justify-self: start;
+    margin-bottom: 24px;
+  }
+
+  .spark-card-stream,
+  .analysis-card-stream,
+  .analysis-explanation-table-stream,
+  .analysis-explanation-chart-stream,
+  .takeaway-card-stream {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* =========================
+     OVERVIEW SECTION
+  ========================= */
+
+  .overview-section-stream {
+    grid-template-columns: 1fr;
+    padding-top: var(--navbar-height);
+  }
+
+  .overview-left-stream {
+    min-height: 40vh;
+  }
+
+  .overview-title-stream {
+    font-size: 2rem;
+    padding: 0 16px;
+  }
+
+  .overview-right-stream {
+    padding: 30px 30px;
+  }
+
+  /* =========================
+     ARCHITECTURE SECTION
+  ========================= */
+
+  .architecture-section-stream {
+    padding: 60px 0;
+    overflow-x: hidden;
+  }
+
+  .architecture-section-stream .heading-p-stream {
+    font-size: 3rem;
+    text-align: left;
+    margin: 0 16px 20px 16px;
+  }
+
+  .architecture-canvas-stream {
+    transform: scale(0.7);
+    transform-origin: top left;
+    width: 100%;
+    height: auto;
+  }
+
+  /* =========================
+     ANALYSIS IMAGES
+  ========================= */
+
+  .analysis-table-img-stream,
+  .analysis-chart-img-stream {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .analysis-chart-img-stream:hover {
+    border-radius: 30px;
+}
+
+  .analysis-section-stream {
+    padding: 40px 24px;
+  }
+
+  .analysis-card-title-stream {
+    margin-bottom: 0;
+   }
+
+  .analysis-card-title-stream h2 {
+    justify-self: center;
+    line-height: 0.9;
+    margin-bottom: 5px;
+   }
+  
+  .analysis-content-stream {
+    margin-top: 0;
+  }
+
+  /* =========================
+     TAKEAWAY SECTION
+  ========================= */
+
+  .takeaway-content-stream {
+    padding: 0 24px;
+  }
+
+  /* =========================
+     DIVIDERS
+  ========================= */
+
+  .spark-content-stream hr,
+  .analysis-content-stream hr,
+  .takeaway-content-stream hr {
+    margin-top: 40px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .spark-ghost-stream h2,
+  .analysis-card-title-stream h2,
+  .takeaway-card-title-stream h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .spark-ghost-stream h2,
+  .analysis-card-title-stream h2,
+  .takeaway-card-title-stream h2 {
     font-size: 2.3rem;
     line-height: 1.1;
     margin-bottom: 15px;

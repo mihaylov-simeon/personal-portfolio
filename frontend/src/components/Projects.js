@@ -1,7 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 
-import dummyImage from "../assets/img/financial-wallpaper.jpg"
+import JpmImage from "../assets/img/financial-wallpaper.jpg"
+import StreamImage from "../assets/img/event-streaming-pipeline.jpg"
 
 export const Projects = () => {
   return (
@@ -40,8 +41,19 @@ export const Projects = () => {
                           title: "JPM Financial Statements Pipeline",
                           description:
                             "Apache Spark pipeline with Bronze / Silver / Gold layers and YoY analytics.",
-                          imgUrl: dummyImage,
+                          imgUrl: JpmImage,
                           route: "/projects/jpm-pipeline"
+                        },
+                      ]}
+                    />
+                    <ProjectCard
+                      projects={[
+                        {
+                          title: "Event Streaming Pipeline",
+                          description:
+                            "Real-time analytics pipeline built with PySpark Structured Streaming.",
+                          imgUrl: StreamImage,
+                          route: "/projects/streaming-pipeline"
                         },
                       ]}
                     />
@@ -57,7 +69,7 @@ export const Projects = () => {
                           title: "SQL → Spark Converter",
                           description:
                             "Tool that converts SQL queries into equivalent PySpark transformations.",
-                          imgUrl: dummyImage,
+                          imgUrl: JpmImage,
                           route: "/projects/jpm-pipeline"
                         },
                       ]}

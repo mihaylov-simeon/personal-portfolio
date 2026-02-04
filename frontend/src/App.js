@@ -8,6 +8,7 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { JPMPipeline } from "./components/JPMPipeline";
+import { StreamPipeline } from "./components/StreamPipeline"
 
 import { MainLayout } from "./layouts/MainLayout";
 import { ProjectLayout } from "./layouts/ProjectLayout";
@@ -68,6 +69,10 @@ function App() {
           <Route
             path="jpm-pipeline"
             element={<JPMPipeline />}
+          />
+          <Route
+            path="streaming-pipeline"
+            element={<StreamPipeline />}
           />
         </Route>
 
