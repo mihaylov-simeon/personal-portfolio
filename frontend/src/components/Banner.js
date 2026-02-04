@@ -10,7 +10,6 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(130);
-  const [index, setIndex] = useState(1);
   const toRotate = [ "Data Engineer", "Software Engineer" ];
 
   useEffect(() => {
@@ -32,10 +31,8 @@ export const Banner = () => {
     if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
     } else if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
       // Increase deletion duration by 1 second
       setDelta(prevDelta => prevDelta + 1);
     }
