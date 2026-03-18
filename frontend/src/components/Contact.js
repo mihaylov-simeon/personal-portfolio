@@ -13,7 +13,7 @@ export const Contact = () => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState("Send Message");
   const [status, setStatus] = useState(null);
 
   const onFormUpdate = (field, value) => {
@@ -53,7 +53,7 @@ export const Contact = () => {
 
     const result = await sendEmail();
 
-    setButtonText("Send");
+    setButtonText("Send Message");
     setStatus(result);
 
     if (result.success) {
@@ -75,8 +75,9 @@ export const Contact = () => {
             <TrackVisibility>
               {() => (
                 <div>
-                  <h2>Get In Touch</h2>
-
+                  <h2>Let’s Talk Data <br></br>
+                  <span>Feel free to reach out — I usually reply within 24 hours.</span>
+                  </h2>
                   <form onSubmit={handleSubmit}>
                     <Row>
                       <Col sm={6} className="px-1">

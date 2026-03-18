@@ -300,7 +300,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0px;
-  padding: 260px 0 100px 0;
+  padding: 200px 0 100px 0;
   background-image: url('./assets/img/banner-bg.webp');
   background-position: top center;
   background-size: cover;
@@ -330,9 +330,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
+
+.banner h1 .heading-span {
+  font-size: 2.3rem
+}
+
 .banner p {
   color: #e3e3e3;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -379,6 +384,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 1400px) {
@@ -938,6 +944,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 30px 10px;
+}
+
+.contact h2 span {
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .contact form {

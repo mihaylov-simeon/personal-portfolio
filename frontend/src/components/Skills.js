@@ -11,10 +11,10 @@ export const Skills = () => {
               <h2>Technologies</h2>
 
               <p>
-                I focus on building reliable, scalable data systems that transform
-                raw data into analytics-ready assets. My core skills span distributed
-                data processing, orchestration, cloud platforms, and data storage,
-                with a strong emphasis on correctness and maintainability.
+                I build batch and streaming data pipelines using PySpark and medallion architecture, 
+                focusing on correctness, scalability, and real-world data processing challenges.
+                My work includes distributed transformations, event-driven processing, and designing 
+                systems that convert raw data into structured, analytics-ready outputs.
               </p>
 
               <div className="skill-section">
@@ -27,6 +27,7 @@ export const Skills = () => {
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href='/assets/skills/spark.svg' x="8" y="7" width="20" height="20" />
                     </svg>
+                    <span>Apache Spark</span>
                   </div>
 
                   {/* Python */}
@@ -36,6 +37,7 @@ export const Skills = () => {
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href="/assets/skills/python.svg" x="8" y="8" width="20" height="20" />
                     </svg>
+                    <span>Python</span>
                   </div>
 
                   {/* SQL */}
@@ -45,6 +47,7 @@ export const Skills = () => {
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href="/assets/skills/sql.svg" x="10" y="8" width="17" height="20" />
                     </svg>
+                  <span>SQL</span>
                   </div>
                 </div>
 
@@ -57,6 +60,7 @@ export const Skills = () => {
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href="/assets/skills/airflow.svg" x="9" y="8" width="17" height="19" />
                     </svg>
+                    <span>Apache Airflow</span>
                   </div>
 
                   {/* AWS */}
@@ -66,6 +70,7 @@ export const Skills = () => {
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href="/assets/skills/aws.svg" x="8" y="8" width="20" height="20" />
                     </svg>
+                    <span>AWS</span>
                   </div>
 
                   {/* PostgreSQL / Parquet */}
@@ -75,6 +80,7 @@ export const Skills = () => {
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href="/assets/skills/postgresql.svg" x="8" y="9" width="19" height="20" />
                     </svg>
+                    <span>PostgreSQL</span>
                   </div>
                 </div>
               </div>
