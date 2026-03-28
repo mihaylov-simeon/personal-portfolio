@@ -20,14 +20,14 @@ export const Skills = () => {
               <div className="skill-section">
                 {/* ================= Row 1 ================= */}
                 <div className="flex-wrapper">
-                  {/* Apache Spark */}
+                  {/* Spark */}
                   <div className="single-chart">
                     <svg viewBox="0 0 36 36" className="circular-chart orange">
                       <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href='/assets/skills/spark.svg' x="8" y="7" width="20" height="20" />
                     </svg>
-                    <span>Apache Spark</span>
+                    <span>Spark</span>
                   </div>
 
                   {/* Python */}
@@ -53,14 +53,14 @@ export const Skills = () => {
 
                 {/* ================= Row 2 ================= */}
                 <div className="flex-wrapper">
-                  {/* Apache Airflow */}
+                  {/* Airflow */}
                   <div className="single-chart">
                     <svg viewBox="0 0 36 36" className="circular-chart s-green">
                       <path className="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <path className="circle" strokeDasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                       <image href="/assets/skills/airflow.svg" x="9" y="8" width="17" height="19" />
                     </svg>
-                    <span>Apache Airflow</span>
+                    <span>Airflow</span>
                   </div>
 
                   {/* AWS */}
