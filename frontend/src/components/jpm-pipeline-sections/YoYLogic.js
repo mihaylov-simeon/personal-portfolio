@@ -24,8 +24,8 @@ export const YoYLogic = () => {
       {/* SECTION 1 */}
       <YoYBlock title="Previous" subtitle="Transaction Amount">
         <p className="yoy-card">
-          To derive meaningful year-over-year metrics, each transaction must be evaluated in the context 
-          of its immediate predecessor within the same business category.
+          Accurate YoY calculation requires each transaction to be evaluated based on it's 
+          immediate predecessor within the same business category.
         </p>
 
         <p className="yoy-card">
@@ -35,7 +35,7 @@ export const YoYLogic = () => {
 
         <ul className="yoy-list yoy-card">
           <li>Time-ordered transactions per business category</li>
-          <li>Isolated comparisons within category boundaries</li>
+          <li>Isolated comparisons accross independent category groups</li>
           <li>Deterministic access to historical values</li>
           <li>Preserved raw data lineage</li>
         </ul>
@@ -49,19 +49,18 @@ export const YoYLogic = () => {
       {/* SECTION 2 */}
       <YoYBlock title="YoY" subtitle="change">
         <p className="yoy-card">
-          Once the previous transaction value is available, the absolute year-over-year 
-          change can be computed directly.
+          With the previous transaction value established, the absolute YoY change to capture the
+          raw magnitute and direction of movement between reporting periods.
         </p>
 
         <p className="yoy-card">
-          This step calculates the numerical difference between the current transaction amount and its 
-          predecessor, capturing the raw magnitude and direction of change between reporting periods.
+          This metric represents the numerical difference between consecutive values providing a
+          direct view of growth or decline without normalization.
         </p>
 
         <ul className="yoy-list yoy-card">
-          <li>Direct subtraction at row level</li>
+          <li>Direct subtraction between current and prior values</li>
           <li>Clear indication of increase or decrease</li>
-          <li>Unit-consistent, interpretable metric</li>
           <li>Suitable for trend inspection and validation</li>
         </ul>
 
@@ -73,14 +72,13 @@ export const YoYLogic = () => {
       {/* SECTION 3 */}
       <YoYBlock title="YoY" subtitle="percentage change">
         <p className="yoy-card">
-          To enable fair comparison across categories with different transaction scales, the 
+          To enable meaningful comparison across categories with different transaction scales, the 
           absolute change is normalized as a percentage of the previous value.
         </p>
 
         <p className="yoy-card">
-          This calculation divides the year-over-year change by the prior transaction amount and multiplies 
-          the result by 100 to receive the actual percentage value. Special handling ensures null or zero base 
-          values do not produce misleading results.
+          This transformation expresses the growth in relative terms, allowing consistent comparison
+          accross categories, time periods and magnitudes.
         </p>
 
         <ul className="yoy-list yoy-card">
@@ -91,7 +89,7 @@ export const YoYLogic = () => {
         </ul>
 
         <p className="yoy-card">
-            The final metric delivers relative year-over-year performance, ready for analytics, 
+            The final metric delivers relative YoY performance, ready for analytics, 
             visualization, and decision-making.
         </p>
       </YoYBlock>

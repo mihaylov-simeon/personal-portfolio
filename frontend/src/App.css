@@ -99,11 +99,17 @@ nav.navbar .navbar-brand a {
     font-weight: 700;
 }
 
-nav.navbar a.navbar-brand span {
+nav.navbar a.navbar-brand .sm {
     color: #fff;
     font-size: 2.5rem;
     font-family: 'Centra';
-    font-weight: 700;
+    font-weight: 400;
+}
+
+nav.navbar a.navbar-brand .highlight {
+  color: #ff8400;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -1083,18 +1089,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 70px;
 }
 
-.footer .navbar-brand span {
-  color: #fff;
-  font-size: 2.5rem;
-  font-family: 'Centra';
-  font-weight: 700;
+.footer a.navbar-brand .sm {
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Centra';
+    font-weight: 400;
 }
 
-.footer .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  margin: 20px 0 20px 0;
+.footer a.navbar-brand .highlight {
+  color: #ff8400;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .footer .footer-links a {
@@ -1103,6 +1108,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-right: 20px;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin: 20px 0 20px 0;
 }
 
 .footer .footer-links a:last-child {
@@ -2911,6 +2923,24 @@ ROW CONTENT
 .takeaway-section-stream:hover h2 {
   color: #bebebe;
   transition: 0.3s ease-in-out;
+}
+
+/************ Financial Market Event Enrichment Pipeline ****************/
+
+/* =========================
+   LEFT PANEL
+========================= */
+
+.financial-overview-left {
+  position: relative;
+  background-image: url("assets/img/financial-code-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1710px) {

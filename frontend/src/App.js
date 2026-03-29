@@ -9,6 +9,7 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { JPMPipeline } from "./components/JPMPipeline";
 import { StreamPipeline } from "./components/StreamPipeline"
+import { FinancialEventEnrichmentPipeline } from "./components/FinancialEventEnrichmentPipeline"
 
 import { MainLayout } from "./layouts/MainLayout";
 import { ProjectLayout } from "./layouts/ProjectLayout";
@@ -61,11 +62,12 @@ function App() {
         {/* Project layout */}
         <Route
           path="/projects"
-          element={<ProjectLayout 
+          element={
+              <ProjectLayout 
               showBackToTop={showBackToTop}
               scrollToTop={scrollToTop}
-          />}
-        >
+          />
+        }>
           <Route
             path="jpm-pipeline"
             element={<JPMPipeline />}
@@ -73,6 +75,10 @@ function App() {
           <Route
             path="streaming-pipeline"
             element={<StreamPipeline />}
+          />
+          <Route 
+            path="financial-event-enrichment"
+            element={<FinancialEventEnrichmentPipeline/>}
           />
         </Route>
 

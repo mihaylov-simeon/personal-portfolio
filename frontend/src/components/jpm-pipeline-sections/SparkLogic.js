@@ -21,14 +21,13 @@ export const SparkLogic = () => {
       {/* SECTION 1 */}
       <SparkBlock title="Pipeline logic" subtitle="and goal">
         <p className="spark-card">
-          The purpose of this pipeline is to process and transform raw financial data
+          The goal of this pipeline is to transform raw financial data
           into analytics-ready datasets that support consistent year-over-year analysis
           across all business categories.
         </p>
 
         <p className="spark-card">
-          The primary focus is correctness, consistency, readability, and reproducible
-          metrics before any performance or execution optimizations are applied.
+          The design prioritizes correctness, reproducibility, and metric consistency.
         </p>
 
         <ul className="spark-list spark-card">
@@ -42,8 +41,8 @@ export const SparkLogic = () => {
       {/* SECTION 2 */}
       <SparkBlock title="Data" subtitle="normalization">
         <p className="spark-card">
-          Raw financial data often contains inconsistencies across reporting periods,
-          sources, and formatting standards.
+          Raw financial data is often inconsistent in schema, formatting, data types,
+          making analysis and comparison difficult.
         </p>
 
         <p className="spark-card">
@@ -53,8 +52,8 @@ export const SparkLogic = () => {
 
         <ul className="spark-list spark-card">
           <li>UnionByName across heterogeneous sources</li>
-          <li>Normalized date formats</li>
-          <li>Trimmed and cleaned categorical fields</li>
+          <li>Standardized date formats for time-based comparison</li>
+          <li>Cleaned and normalized categorical fields</li>
           <li>Typed numeric values using Decimal precision</li>
         </ul>
       </SparkBlock>

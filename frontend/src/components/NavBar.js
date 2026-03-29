@@ -37,7 +37,11 @@ export const NavBar = ({ variant = "default" }) => {
       <Navbar expand="md" className={` ${scrolled ? "scrolled" : ""} navbar-${variant}`}>
         <Container>
           <Navbar.Brand href="/">
-            <div><FontAwesomeIcon icon={faTerminal} style={{ marginLeft: '5px' }} /><span>SMCODELAB</span></div>
+            <div><FontAwesomeIcon icon={faTerminal} style={{ marginLeft: '5px' }} />
+              <span className="sm">
+                SM.<span className="highlight">DataForge</span>
+              </span>
+            </div>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav">

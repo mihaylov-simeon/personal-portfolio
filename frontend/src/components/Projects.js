@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 
 import JpmImage from "../assets/img/financial-wallpaper.jpg"
 import StreamImage from "../assets/img/event-streaming-pipeline.jpg"
+import FinancialImage from "../assets/img/financial-neon-bull.jpg"
 
 export const Projects = () => {
   return (
@@ -57,6 +58,17 @@ export const Projects = () => {
                         },
                       ]}
                     />
+                    <ProjectCard
+                      projects={[
+                        {
+                          title: "Financial Market Event Enrichment",
+                          description:
+                            "A PySpark pipeline that enriches raw financial data into actionable market signals.",
+                          imgUrl: FinancialImage,
+                          route: "/projects/financial-event-enrichment"
+                        },
+                      ]}
+                    />
                   </Row>
                 </Tab.Pane>
 
@@ -70,7 +82,7 @@ export const Projects = () => {
                           description:
                             "Tool that converts SQL queries into equivalent PySpark transformations.",
                           imgUrl: JpmImage,
-                          route: "/projects/jpm-pipeline"
+                          route: "/projects/financial-event-enrichment"
                         },
                       ]}
                     />

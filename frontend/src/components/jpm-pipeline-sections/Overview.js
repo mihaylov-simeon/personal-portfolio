@@ -28,7 +28,7 @@ export const Overview = () => {
         />
 
         <h1 className="overview-title">
-          JPM PIPELINE<br />DESIGN OVERVIEW
+          JPM FINANCIAL METRICS<br />PIPELINE OVERVIEW
         </h1>
       </div>
 
@@ -44,18 +44,13 @@ export const Overview = () => {
          <div className="overview-content">
           <h2>Project Overview</h2>
           <p className="overview-card">
-            This project showcases a Spark-based ETL pipeline designed to 
-            process JPMorgan Chase financial statements using a Bronze–Silver–Gold architecture.
+            Process JPMorgan Chase financial statements using a PySpark-based Bronze-Silver-Gold pipeline.
+            <br /><br />
+            Converts RAW financial data into a structured dataset with year-over-year (YoY) metrics for
+            financial analysis.
+            <br /><br />
+            Includes a Matplotlib-based visualization highlighting YoY % Change and trend acceleration.
             </p>
-          <p className="overview-card">The pipeline transforms raw financial data into analytics-ready 
-            datasets with year-over-year metrics, focusing on scalability, clarity, and 
-            production-style design.
-            </p>
-          <p className="overview-card">
-            The project also includes basic data analytics diagram visualised through matplotlib to demonstrate 
-            the insights derived from the processed data. The diagram highlights the YoY % Change and 
-            YoY Acceleration metrics.
-          </p>
           <div className="overview-btn-wrapper">
             <button className="view-project-btn" onClick={() => window.open("https://github.com/mihaylov-simeon/JPMC-financial-statements-pipeline", "_blank")}>
               View Project on Github

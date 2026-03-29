@@ -11,8 +11,12 @@ export const Footer = ({ variant = "default" }) => {
         <Row className="align-items-center justify-content-between">
           <Col xs={12} sm={6}>
             <Navbar.Brand href="/">
-              <div><FontAwesomeIcon icon={faTerminal} style={{ marginRight: '5px' }} /><span>SMCODELAB</span></div>
-            </Navbar.Brand>
+            <div><FontAwesomeIcon icon={faTerminal} style={{ marginLeft: '5px' }} />
+              <span className="sm">
+                SM.<span className="highlight">DataForge</span>
+              </span>
+            </div>
+          </Navbar.Brand>
           </Col>
           <Col xs={12} sm={6} className="text-center text-sm-end">
             <div className="footer-links">
@@ -31,7 +35,7 @@ export const Footer = ({ variant = "default" }) => {
       <Container>
         <Row>
           <Col xs={12} className="text-center">
-            <p>&copy; &gt;_SMCODELAB. All rights reserved.</p>
+            <p>&copy; &gt;_SM.DataForge. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

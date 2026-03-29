@@ -28,7 +28,7 @@ export const StreamOverview = () => {
         />
 
         <h1 className="overview-title">
-          STREAMING PIPELINE<br />DESIGN OVERVIEW
+          REAL-TIME STREAMING<br />PIPELINE OVERVIEW
         </h1>
       </div>
 
@@ -48,10 +48,10 @@ export const StreamOverview = () => {
             high-volume customer events in real time using PySpark Structured Streaming.
             </p>
           <p className="overview-card">
-            The pipeline is built around event-time semantics and its primary goal is to ensure correctness 
-            and reliability in a streaming environment where events may arrive out of order, be duplicated, or arrive late.
-            Clear separation between ingestion, correctness, and analytics concerns is achieved by implementing a
-            'Medallion Architecture'.
+            It handles out-of-order, duplicated, and late-arriving events through event-time processing,
+            watermarking, and stateful transformations to ensure correctness, handling ingestion,
+            data reliability, and analytical computation into distinct layers, producing consistent,
+            analytics-ready outputs in a streaming environment.
             </p>
           <p className="overview-card">
             - Event-time processing with watermarks
@@ -60,7 +60,7 @@ export const StreamOverview = () => {
             <br />
             - Exactly-once processing guarantees via checkpoints
             <br />
-            - Independent Gold-layer aggregations for analytical isolation
+            - Independent Gold-layer for analytical isolation
           </p>
           <div className="overview-btn-wrapper">
             <button className="view-project-btn" onClick={() => window.open("https://github.com/mihaylov-simeon/Customer-event-pipeline", "_blank")}>

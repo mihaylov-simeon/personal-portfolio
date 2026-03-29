@@ -1,7 +1,7 @@
-export const Architecture = () => {
+export const FinancialArchitecture = () => {
   return (
     <section className="architecture-section">
-        <p className="heading-p">Data Processing</p> 
+        <p className="heading-p">Pipeline</p> 
         <p className="heading-p">architecture</p>
         <div className="architecture-canvas">
           <div className="module raw-data" />
