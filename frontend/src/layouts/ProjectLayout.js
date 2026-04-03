@@ -1,8 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { NavBar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 
 export const ProjectLayout = ({ showBackToTop, scrollToTop }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <NavBar variant="project" />

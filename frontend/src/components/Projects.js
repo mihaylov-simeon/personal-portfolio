@@ -50,7 +50,7 @@ export const Projects = () => {
                     <ProjectCard
                       projects={[
                         {
-                          title: "Event Streaming Pipeline",
+                          title: "Real-time Event Streaming Pipeline",
                           description:
                             "Real-time analytics pipeline built with PySpark Structured Streaming.",
                           imgUrl: StreamImage,

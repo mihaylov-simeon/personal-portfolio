@@ -14,7 +14,7 @@ export const ProjectCard = ({ projects }) => {
               <span>{project.description}</span>
 
               {project.route && (
-                <Link to={project.route} className="project-link" target="_blank">
+                <Link to={project.route} className="project-link">
                   View project
                 </Link>
               )}
