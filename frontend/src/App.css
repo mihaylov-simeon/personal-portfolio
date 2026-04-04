@@ -88,6 +88,15 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 
+.logo-wrapper {
+  transition: 0.5s;
+}
+
+.logo-wrapper:hover {
+  scale: 1.03;
+  transition: 0.5s;
+}
+
 nav.navbar .navbar-brand a {
   text-decoration: none;
 }
@@ -120,6 +129,10 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-size: 1.2rem;
   opacity: 0.75;
   font-weight: bold;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link:hover {
+  color: #ff8400 !important;
 }
 
 @media screen and (max-width: 430px) {
@@ -1127,7 +1140,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .footer .footer-links a:hover {
-  color: #ffd901;
+  color: #ff8400;
 }
 
 @media screen and (max-width: 576px) {
@@ -1633,6 +1646,10 @@ ROW CONTENT
 .spark-card {
   font-size: 1.2rem;
   color: #f0f0f0;
+}
+
+#root > section > section.spark-section-stream > div:nth-child(3) > div.spark-text > p {
+  margin-bottom: 130px;
 }
 
 /* =========================
@@ -2599,4 +2616,3 @@ ROW CONTENT
   top: 105px;
   background-image: url("/public/assets/architecture2/stream-analytics.svg");
 }
-

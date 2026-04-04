@@ -48,13 +48,13 @@ export const FinancialLayers = () => {
         <p className="spark-card">
           The Gold layer produces multiple co-dependend analytical outputs, each targeted at a specific question:
           <br /><br />
-            <p style={{ textIndent: "15px" }}>- daily price movement and gaps<br /></p>
-            <p style={{ textIndent: "15px" }} >- daily trading volume and liquidity<br /></p>
-            <p style={{ textIndent: "15px" }} >- stock movement direction and volatility<br /></p>
-            <p style={{ textIndent: "15px" }} >- day-to-day price movement, recent drops and market entering opportunities<br /></p>
-            <p style={{ textIndent: "15px" }} >- is a stock strengthening or weakening relative to the overal market<br /></p>
-            <p style={{ textIndent: "15px" }} >- is it a good or a bad day for the overal market ignoring individual stocks<br /></p>
-            <p style={{ textIndent: "15px" }} >- are the earnings reports matching expectations and the market reaction to their announcement<br /></p>
+            - daily price movement and gaps <br />
+            - daily trading volume and liquidity <br />
+            - stock movement direction and volatility <br />
+            - day-to-day price movement, recent drops and market entering opportunities <br />
+            - is a stock strengthening or weakening relative to the overal market <br />
+            - is it a good or a bad day for the overal market ignoring individual stocks <br />
+            - are the earnings reports matching expectations and the market reaction to their announcement <br />
           <br />
           Each of these pipelines is a separate analytics opportunity that can be analysed independently
           despite pipelines being co-dependend on each other.
