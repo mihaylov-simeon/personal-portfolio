@@ -21,9 +21,13 @@ export const Footer = ({ variant = "default" }) => {
           <Col xs={12} sm={6} className="text-center text-sm-end">
             <div className="footer-links">
               <a href="/">Home</a>
-              <a href="#skills">Skills</a>
-              <a href="#projects">Projects</a>
-              <a href="#connect">Contact</a>
+              { variant === "default" && (
+                <>
+                  <a href="#skills">Skills</a>
+                  <a href="#projects">Projects</a>
+                  <a href="#connect">Contact</a>
+                </>
+              )}
             </div>
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/s-mihaylov/" target="_blank" rel="noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
