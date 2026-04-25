@@ -2107,8 +2107,8 @@ ROW CONTENT
   font-weight: 600;
   text-align: left;
   padding: 4px 10px;
-  border-bottom: 1px solid #555;
-  border-right: 1px solid #3a3a3a;
+  border-bottom: 1px solid #666666;
+  border-right: 1px solid #4e4e4e;
   letter-spacing: 0.03em;
 }
 
@@ -2118,8 +2118,8 @@ ROW CONTENT
 
 .output-data-table tbody td {
   padding: 3px 10px;
-  border-bottom: 1px solid #2a2a2a;
-  border-right: 1px solid #2a2a2a;
+  border-bottom: 1px solid #666666;
+  border-right: 1px solid #4e4e4e;
 }
 
 .output-data-table tbody td:last-child {
