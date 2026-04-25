@@ -813,7 +813,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .back-to-top:hover {
-  background-color: #874400;
+  background-color: #ff8400;
   color: #fff;
 }
 
@@ -1018,18 +1018,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact form button {
-  border: none;
-  background: #ffd901;
-  color: #000;
+  border: 3px solid #ffffff;
+  background: #000000;
+  color: #ffffff;
   padding: 10px 30px;
-  font-size: 1.2rem;
+  margin-top: 30px;
+  font-size: 1.3rem;
   cursor: pointer;
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .contact form button:hover {
-  background: #f4c20d;
+  background: #ff8400;
+  border: 3px solid #ff8400;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
@@ -2040,8 +2043,7 @@ ROW CONTENT
   text-align: center;
 }
 
-.takeaway-content.engineering-desicions.output-and-use,
-.takeaway-content-stream {
+.takeaway-content.engineering-desicions.output-and-use{
   grid-template-columns: 1fr;
   margin-top: 0;
 }
