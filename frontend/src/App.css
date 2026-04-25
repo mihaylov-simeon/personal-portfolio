@@ -1065,11 +1065,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .footer--project {
   padding: 10px 0;
-  background: linear-gradient(
-    180deg,
-    #202020 0%,
-    #202020 100%
-  );
+  background-color: #202020;
 }
 
 .footer img {
@@ -1324,8 +1320,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 100px 0;
   background: linear-gradient(
     180deg,
-    rgba(26, 26, 26, 1) 0%,
-    rgba(46, 46, 46, 1) 100%
+    #353535 0%,
+    #3a3a3a 5%,
+    #2e2e2e 40%,
+    #2e2e2e 75%,
+    #202020 100%
   );
   overflow: hidden;
 }
@@ -1566,16 +1565,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .spark-section,
 .spark-section-stream {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   min-height: 100vh;
-  padding: 80px 80px 0 80px;
-  gap: 80px;
+  padding: 130px 80px 0 80px;
+  gap: 40px;
   background: linear-gradient(
     180deg,
-    #2e2e2e 0%,
+    #202020 0%,
+    #2e2e2e 8%,
     #353535 35%,
     #3a3a3a 55%,
-    #202020 90%
+    #202020 100%
   );
 }
 
@@ -1587,7 +1587,7 @@ ROW CONTENT
 .spark-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
+  align-items: center;
   position: relative;
   transition: 0.7s ease-in-out;
 }
@@ -2004,7 +2004,6 @@ ROW CONTENT
 
 .takeaway-section {
   display: grid;
-
   background: linear-gradient(
     180deg,
     #202020 0%,
@@ -2028,7 +2027,7 @@ ROW CONTENT
   grid-column: 1 / -1;
   border: none;
   height: 30px;
-  margin-top: 100px;
+  margin: 100px 0 50px 0;
   background: linear-gradient(
     90deg,
     transparent,
@@ -2037,10 +2036,96 @@ ROW CONTENT
   )
 }
 
+.takeaway-card-title.engineering-decisions h2 {
+  text-align: center;
+}
+
+.takeaway-content.engineering-desicions.output-and-use,
+.takeaway-content-stream {
+  grid-template-columns: 1fr;
+  margin-top: 0;
+}
+
+.engineering-desicions hr {
+  margin: 19px;
+  height: 15px;
+}
+
+.takeaway-card.engineering-desicions {
+  transition: 0.5s
+}
+
+.takeaway-card.engineering-desicions:hover {
+  scale: 1.03;
+  transition: 0.5s;
+  opacity: 80%;
+  color: #fffaf6;
+}
+
+.engineering-decisions {
+  padding: 80px;
+}
+
+.engineering-decisions * strong {
+  color: #ff8400;
+}
+
+
 .takeaway-card {
   font-size: 1.2rem;
-  max-width: 730px;
-  justify-self: end;
+  max-width: 90%;
+  justify-self: center;
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  margin: 0;
+  background: linear-gradient(90deg, transparent, #555555, transparent);
+}
+
+.output-data-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.output-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #e8e8e8;
+  white-space: nowrap;
+}
+
+.output-data-table thead th {
+  color: #ff8400;
+  font-weight: 600;
+  text-align: left;
+  padding: 4px 10px;
+  border-bottom: 1px solid #555;
+  border-right: 1px solid #3a3a3a;
+  letter-spacing: 0.03em;
+}
+
+.output-data-table thead th:last-child {
+  border-right: none;
+}
+
+.output-data-table tbody td {
+  padding: 3px 10px;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+}
+
+.output-data-table tbody td:last-child {
+  border-right: none;
+}
+
+.output-data-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 .takeaway-card-title h2 {

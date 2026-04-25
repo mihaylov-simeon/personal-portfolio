@@ -10,9 +10,13 @@ export const JPMPipeline = () => {
     <section className="jpm_pipeline" id="jpm-p">
       <Overview />
       <Architecture />
+      <hr className="section-divider" />
       <SparkLogic />
+      <hr className="section-divider" />
       <YoYLogic />
+      <hr className="section-divider" />
       <Analysis />
+      <hr className="section-divider" />
       <Takeaway />
     </section>
   )

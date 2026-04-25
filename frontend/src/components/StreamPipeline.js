@@ -10,8 +10,11 @@ export const StreamPipeline = () => {
     <section className="streaming-pipeline" id="stream-p">
       <StreamOverview />
       <StreamArchitecture />
+      <hr className="section-divider" />
       <StreamLayers />
+      <hr className="section-divider" />
       <StreamAnalysis />
+      <hr className="section-divider" />
       <StreamTakeaway />
     </section>
   )

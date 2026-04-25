@@ -3,17 +3,18 @@ import { FinancialArchitecture } from './financial-market-enrichment/FinancialAr
 import { FinancialLayers } from './financial-market-enrichment/FinancialLayers'
 import { FinancialKeyEngineeringDecisions } from './financial-market-enrichment/FinancialKeyEngineeringDecisions'
 import { FinancialOutputAndUseCases } from  './financial-market-enrichment/FinancialOutputAndUseCases'
-import { FinancialTakeaway } from './financial-market-enrichment/FinancialTakeaway'
 
 export const FinancialEventEnrichmentPipeline = () => {
   return (
     <section className="financial-event-enrichment">
       <FinancialOverview />
       <FinancialArchitecture />
-      <FinancialLayers />
+      <hr className="section-divider" />
       <FinancialKeyEngineeringDecisions />
+      <hr className="section-divider" />
+      <FinancialLayers />
+      <hr className="section-divider" />
       <FinancialOutputAndUseCases />
-      <FinancialTakeaway />
     </section>
   )
 };
