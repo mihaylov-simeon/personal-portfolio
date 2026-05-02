@@ -17,13 +17,13 @@ export const StreamTakeaway = () => {
   return (
     <section className="takeaway-section">
         <TakeawayBlock className="takeaway-intro"
-            right={
+            left={
               <p className="takeaway-card-title">
                 <h2>Analytical</h2>
                 <h2>Takeaway</h2>
                 </p>
             }
-            left={
+            right={
                 <>
                 <p className="takeaway-card">
                     This project demonstrates how a production-grade streaming pipeline can be designed to remain correct,

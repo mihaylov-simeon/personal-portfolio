@@ -2178,6 +2178,10 @@ ROW CONTENT
   .overview-title {
     text-align: center;
   }
+  .section-divider {
+    display: none;
+  }
+
   /* Kill all complex grids */
   .spark-section,
   .spark-section-stream,
@@ -2186,6 +2190,7 @@ ROW CONTENT
   .takeaway-section {
     display: block;
     padding: 30px 30px;
+    overflow-x: hidden;
   }
 
   .yoy-section {
@@ -2320,6 +2325,14 @@ ROW CONTENT
 
   .analysis-table-img {
     filter: grayscale(0%);
+  }
+
+  .engineering-decisions {
+    padding: 30px;
+  }
+
+  .output-data-table {
+    font-size: 0.8rem;
   }
 }
 
@@ -2501,6 +2514,30 @@ ROW CONTENT
     padding: 0 24px;
   }
 
+  .engineering-decisions {
+    padding: 24px;
+  }
+
+  .output-data-table {
+    font-size: 0.75rem;
+  }
+
+  .output-data-table thead th,
+  .output-data-table tbody td {
+    padding: 3px 8px;
+  }
+
+  .output-data-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .takeaway-text,
+  .takeaway-ghost {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   /* =========================
      DIVIDERS
   ========================= */
@@ -2525,6 +2562,23 @@ ROW CONTENT
     line-height: 1.1;
     margin-bottom: 15px;
   }
+
+  .engineering-decisions {
+    padding: 16px;
+  }
+
+  .architecture-canvas {
+    transform: scale(0.45);
+  }
+
+  .output-data-table {
+    font-size: 0.65rem;
+  }
+
+  .output-data-table thead th,
+  .output-data-table tbody td {
+    padding: 2px 5px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -2535,6 +2589,19 @@ ROW CONTENT
     font-size: 2.3rem;
     line-height: 1.1;
     margin-bottom: 15px;
+  }
+
+  .engineering-decisions {
+    padding: 12px;
+  }
+
+  .output-data-table {
+    font-size: 0.55rem;
+  }
+
+  .output-data-table thead th,
+  .output-data-table tbody td {
+    padding: 2px 4px;
   }
 }
 
