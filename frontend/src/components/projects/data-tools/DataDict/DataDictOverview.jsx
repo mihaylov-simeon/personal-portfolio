@@ -1,4 +1,4 @@
-import "../../../../assets/css/datadict.css";
+import "./DataDict.css";
 import financialCode from "../../../../assets/img/financial-code-image.png";
 
 export const DataDictOverview = () => {
