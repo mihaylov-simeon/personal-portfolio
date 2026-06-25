@@ -1,7 +1,7 @@
 /* ============================================================
    Shared styles for old-style project pages (Stream + Financial).
    Imported by StreamPipeline.js and FinancialEventEnrichmentPipeline.js.
-   Dead JPM-only classes removed — those pages now use JPMPipeline.css.
+   Dead JPM-only classes removed - those pages now use JPMPipeline.css.
 ============================================================ */
 
 :root {
@@ -216,7 +216,7 @@
   transition: stroke-width 0.25s ease, opacity 0.25s ease;
 }
 
-/* Architecture hover scaling — stream and financial module classes only */
+/* Architecture hover scaling - stream and financial module classes only */
 .raw-data-stream,
 .spark-etl-stream,
 .bronze-layer-stream,

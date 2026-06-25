@@ -43,7 +43,7 @@ const outputs = [
   },
   {
     title: "Risk-Adjusted Return Ranking",
-    description: "Determines whether it is a good idea to enter the market. Divides the 20-day rolling return by rolling volatility — penalising volatile stocks and rewarding stable ones. Used to rank stocks by how efficiently they made their return, not only how much.",
+    description: "Determines whether it is a good idea to enter the market. Divides the 20-day rolling return by rolling volatility - penalising volatile stocks and rewarding stable ones. Used to rank stocks by how efficiently they made their return, not only how much.",
     headers: ['SYMBOL', 'DATE', 'ROLL_VOL_20D', 'MAX_DRAWDOWN', 'ROLL_RET_20D', 'RISK_ADJ_RET'],
     rows: [
       ['AAC', '2014-10-30', '3.1274', '-0.0597', '0.1459', '0.0466'],
@@ -70,7 +70,7 @@ const outputs = [
   },
   {
     title: "Market Breadth as a Filter Layer",
-    description: "Instead of asking \"is the index up today?\", this pipeline asks what percentage of all stocks are up. If only 20% are rising but the index is up, it is being pulled by large-caps — the market is not broadly healthy. Used to determine whether long signals should be taken at all on a given day.",
+    description: "Instead of asking \"is the index up today?\", this pipeline asks what percentage of all stocks are up. If only 20% are rising but the index is up, it is being pulled by large-caps - the market is not broadly healthy. Used to determine whether long signals should be taken at all on a given day.",
     headers: ['DATE', 'TOTAL_STOCKS', 'PCT_UP', 'PCT_DOWN', 'AVG_VOLATILITY', 'BREADTH_REGIME'],
     rows: [
       ['2000-01-26', '2338', '0.4345', '0.4110', '4.7346', 'NEUTRAL'],

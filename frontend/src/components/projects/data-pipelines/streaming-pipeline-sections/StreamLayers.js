@@ -7,7 +7,7 @@ const layers = [
       "Checkpointed streaming ingestion ensures fault tolerance and enables deterministic reprocessing of downstream layers when needed.",
     ],
     bullets: [
-      "Schema enforcement on ingest — no silent type coercion",
+      "Schema enforcement on ingest - no silent type coercion",
       "Append-only writes for full replayability",
       "Checkpoint-backed fault tolerance",
     ],
@@ -30,13 +30,13 @@ const layers = [
     title: "Gold Layer",
     p: [
       "The Gold layer produces analytics-ready outputs from the corrected event stream, with each stream designed to answer a specific analytical question. Windowed aggregations are computed and written as independent, append-only outputs.",
-      "By isolating analytical concerns across multiple Gold streams, the pipeline maintains scalability, flexibility, and fault containment — each metric can evolve independently.",
+      "By isolating analytical concerns across multiple Gold streams, the pipeline maintains scalability, flexibility, and fault containment - each metric can evolve independently.",
     ],
     bullets: [
-      "Active users per window — engagement signal",
-      "Total event count — platform traffic indicator",
-      "Per-device purchase breakdown — segmentation",
-      "Revenue per window — monetization tracking",
+      "Active users per window - engagement signal",
+      "Total event count - platform traffic indicator",
+      "Per-device purchase breakdown - segmentation",
+      "Revenue per window - monetization tracking",
     ],
   },
 ];

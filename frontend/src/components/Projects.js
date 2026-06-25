@@ -5,7 +5,7 @@ import { ProjectCard } from "./ProjectCard";
 import JpmImage from "../assets/img/financial-wallpaper.jpg"
 import StreamImage from "../assets/img/event-streaming-pipeline.jpg"
 import FinancialImage from "../assets/img/financial-neon-bull.jpg"
-import DataToolsImage from "../assets/img/financial-code-image.png"
+import DataToolsImage from "../assets/img/programming-background.jpg"
 
 export const Projects = () => {
   return (
@@ -82,7 +82,7 @@ export const Projects = () => {
                         {
                           title: "Data Function Dictionary",
                           description:
-                            "Interactive browser-based reference for Pandas, Polars, and PySpark. Click any function, see it run against real data, get the exact code — instantly.",
+                            "Interactive browser-based reference for Pandas, Polars, and PySpark. Click any function, see it run against real data, get the exact code - instantly.",
                           imgUrl: DataToolsImage,
                           route: "/projects/data-dict"
                         },

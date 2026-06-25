@@ -1,6 +1,6 @@
 const points = [
   "The year-over-year and acceleration metrics reveal not only growth, but the direction and momentum of that growth.",
-  "While total assets continue to increase, the deceleration in YoY percentage change highlights a slowdown in expansion rate — a signal that would be invisible when observing absolute values alone.",
+  "While total assets continue to increase, the deceleration in YoY percentage change highlights a slowdown in expansion rate - a signal that would be invisible when observing absolute values alone.",
   "By surfacing both level and momentum, the pipeline enables early detection of trend inflection points and supports more informed financial analysis and decision-making.",
 ];
 

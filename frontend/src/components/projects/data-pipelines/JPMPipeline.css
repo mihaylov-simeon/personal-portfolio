@@ -1,17 +1,17 @@
 /* ============================================================
-   JPM PIPELINE PAGE — REDESIGN
+   JPM PIPELINE PAGE - REDESIGN
    Isolated classes (jpm- prefix). Does not affect other pages.
 ============================================================ */
 
 /* ---- Hero ---- */
 .jpm-hero {
   position: relative;
-  min-height: 82vh;                  /* FIX 1: was 100vh — too much empty space */
+  min-height: 82vh;                  /* FIX 1: was 100vh - too much empty space */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;              /* FIX 1: was flex-end — content now centered vertically */
+  align-items: center;              /* FIX 1: was flex-end - content now centered vertically */
   padding: 95px 8% 6% 8%;          /* FIX 1: padding-top = navbar height, bottom reduced */
   overflow: hidden;
 }
@@ -53,7 +53,7 @@
 
 .jpm-hero-sub {
   font-size: 1.1rem;
-  color: #a0a0a0;                    /* FIX 6: was #909090 — slightly brighter */
+  color: #a0a0a0;                    /* FIX 6: was #909090 - slightly brighter */
   line-height: 1.75;
   max-width: 540px;
   margin-bottom: 40px;
@@ -102,9 +102,9 @@
 
 /* ---- Architecture ---- */
 .jpm-arch {
-  background: #111;                  /* FIX 6: was #0f0f0f — slight contrast lift */
+  background: #111;                  /* FIX 6: was #0f0f0f - slight contrast lift */
   padding: 100px 8%;
-  border-top: 1px solid #252525;    /* FIX 6: was #1c1c1c — more visible separator */
+  border-top: 1px solid #252525;    /* FIX 6: was #1c1c1c - more visible separator */
 }
 
 .jpm-arch-header {
@@ -122,19 +122,19 @@
   display: flex;
   align-items: stretch;             /* FIX 3: stretch so cards fill height equally */
   gap: 0;
-                                    /* FIX 3: removed overflow-x: auto — no horizontal scroll */
+                                    /* FIX 3: removed overflow-x: auto - no horizontal scroll */
 }
 
 .jpm-arch-step {
-  flex: 1;                          /* FIX 3: was fixed min-width — now fills available space */
+  flex: 1;                          /* FIX 3: was fixed min-width - now fills available space */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 28px 12px;
-  background: #191919;             /* FIX 6: was #141414 — slightly more visible */
-  border: 1px solid #2a2a2a;       /* FIX 6: was #222 — slightly brighter */
+  background: #191919;             /* FIX 6: was #141414 - slightly more visible */
+  border: 1px solid #2a2a2a;       /* FIX 6: was #222 - slightly brighter */
   border-radius: 8px;
   transition: border-color 0.2s, transform 0.2s;
   cursor: default;
@@ -163,14 +163,14 @@
 
 .jpm-arch-sub {
   font-size: 0.73rem;
-  color: #666;                       /* FIX 6: was #555 — slightly more readable */
+  color: #666;                       /* FIX 6: was #555 - slightly more readable */
   line-height: 1.45;
   display: block;
 }
 
 .jpm-arch-arrow {
   font-size: 1.1rem;
-  color: #363636;                    /* FIX 6: was #2e2e2e — slightly more visible */
+  color: #363636;                    /* FIX 6: was #2e2e2e - slightly more visible */
   padding: 0 10px;
   flex-shrink: 0;
   user-select: none;
@@ -209,7 +209,7 @@
   padding-bottom: 0;
 }
 
-/* FIX 4: right-aligned chapter — content anchored to right side */
+/* FIX 4: right-aligned chapter - content anchored to right side */
 .jpm-chapter--right {
   flex-direction: row-reverse;
   justify-content: flex-start;      /* flex-start in row-reverse = anchored right */
@@ -249,7 +249,7 @@
 
 .jpm-chapter-p {
   font-size: 1rem;
-  color: #9a9a9a;                    /* FIX 6: was #888 — more readable */
+  color: #9a9a9a;                    /* FIX 6: was #888 - more readable */
   line-height: 1.85;
   margin-bottom: 14px;
 }
@@ -262,7 +262,7 @@
 
 .jpm-chapter-list li {
   font-size: 0.96rem;
-  color: #c0c0c0;                    /* FIX 6: was #bbb — slightly brighter */
+  color: #c0c0c0;                    /* FIX 6: was #bbb - slightly brighter */
   padding: 9px 0 9px 18px;
   border-left: 2px solid #ff8400;
   margin-bottom: 8px;

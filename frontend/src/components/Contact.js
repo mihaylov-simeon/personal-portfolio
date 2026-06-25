@@ -77,7 +77,7 @@ export const Contact = () => {
               {() => (
                 <div>
                   <h2>Let’s Talk Data <br></br>
-                  <span>Feel free to reach out — I usually reply within 24 hours.</span>
+                  <span>Feel free to reach out - I usually reply within 24 hours.</span>
                   </h2>
                   <form onSubmit={handleSubmit}>
                     <Row>

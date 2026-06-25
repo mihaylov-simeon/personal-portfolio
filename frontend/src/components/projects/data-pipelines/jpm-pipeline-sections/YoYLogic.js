@@ -18,7 +18,7 @@ const chapters = [
     title: "YoY Absolute Change",
     paragraphs: [
       "With the previous transaction value established, the absolute YoY change captures the raw magnitude and direction of movement between reporting periods.",
-      "This metric represents the numerical difference between consecutive values — providing a direct view of growth or decline without normalization.",
+      "This metric represents the numerical difference between consecutive values - providing a direct view of growth or decline without normalization.",
     ],
     bullets: [
       "Direct subtraction between current and prior values",

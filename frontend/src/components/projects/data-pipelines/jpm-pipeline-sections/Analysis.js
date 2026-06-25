@@ -20,7 +20,7 @@ export const Analysis = () => {
             alt="Year-over-year calculation example table"
           />
           <p className="jpm-analysis-caption">
-            Window function output — YoY change per reporting period
+            Window function output - YoY change per reporting period
           </p>
         </div>
         <div className="jpm-analysis-text">
@@ -31,7 +31,7 @@ export const Analysis = () => {
           </p>
           <p>
             The first period has no prior reference, while subsequent rows expose
-            both absolute (YoY Change) and relative (YoY %) movement — making
+            both absolute (YoY Change) and relative (YoY %) movement - making
             trend detection immediate.
           </p>
         </div>
@@ -44,13 +44,13 @@ export const Analysis = () => {
             alt="Matplotlib YoY percentage change chart"
           />
           <p className="jpm-analysis-caption">
-            Matplotlib visualization — YoY % Change and acceleration trend
+            Matplotlib visualization - YoY % Change and acceleration trend
           </p>
         </div>
         <div className="jpm-analysis-text">
           <p>
             The chart surfaces not just growth, but the rate at which growth is
-            changing — revealing inflection points that raw values alone would hide.
+            changing - revealing inflection points that raw values alone would hide.
           </p>
           <p>Key findings from this analysis:</p>
           <ul className="jpm-analysis-list">

@@ -17,7 +17,7 @@ const chapters = [
     num: "02",
     title: "Data Normalization",
     paragraphs: [
-      "Raw financial data is often inconsistent in schema, formatting, and data types — making analysis and comparison difficult.",
+      "Raw financial data is often inconsistent in schema, formatting, and data types - making analysis and comparison difficult.",
       "This stage ensures schema stability, consistent date handling, and uniform numeric precision across the entire dataset.",
     ],
     bullets: [

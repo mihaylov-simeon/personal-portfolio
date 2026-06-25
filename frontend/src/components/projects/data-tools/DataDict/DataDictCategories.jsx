@@ -3,8 +3,8 @@ const categories = [
     num: "01",
     title: "Null Handling",
     p: [
-      "Covers the full lifecycle of null data in a real dataset — detection, filtering, and imputation. The dummy dataset ships with intentional nulls across four columns, making every function immediately meaningful.",
-      "Includes honest notes on when NOT to use mean imputation (financial data, skewed distributions) and why empty strings are not null — a common source of silent data quality bugs.",
+      "Covers the full lifecycle of null data in a real dataset - detection, filtering, and imputation. The dummy dataset ships with intentional nulls across four columns, making every function immediately meaningful.",
+      "Includes honest notes on when NOT to use mean imputation (financial data, skewed distributions) and why empty strings are not null - a common source of silent data quality bugs.",
     ],
     bullets: [
       "dropna with subset / how / thresh variants",
@@ -42,7 +42,7 @@ const categories = [
     num: "04",
     title: "String Operations",
     p: [
-      "All 6 functions demonstrated against deliberately messy customer name data — mixed casing, double spaces, leading/trailing whitespace — so the transformation is always obvious.",
+      "All 6 functions demonstrated against deliberately messy customer name data - mixed casing, double spaces, leading/trailing whitespace - so the transformation is always obvious.",
       "Includes the contains/str.match distinction and split with expand=True vs returning a list, which behaves differently across all three libraries.",
     ],
     bullets: [
@@ -55,7 +55,7 @@ const categories = [
     num: "05",
     title: "Date Operations",
     p: [
-      "Covers date parsing, part extraction, and truncation. The dummy table includes a deliberately invalid date string to demonstrate errors='coerce' behaviour — where the invalid value becomes null rather than raising an exception.",
+      "Covers date parsing, part extraction, and truncation. The dummy table includes a deliberately invalid date string to demonstrate errors='coerce' behaviour - where the invalid value becomes null rather than raising an exception.",
       "Parsing strategy matters: errors='coerce' is the safe default for production pipelines; errors='raise' is useful for strict validation contexts. The tool shows both.",
     ],
     bullets: [
@@ -69,7 +69,7 @@ const categories = [
     title: "Sorting, Ranking & Type Casting",
     p: [
       "sort_values with multi-column mixed-direction sorting, nlargest/nsmallest for top/bottom-N selection without sorting the full frame, astype/cast for explicit type conversion, and dtypes/schema for inspection.",
-      "Type casting includes nullable integer handling — the pd.Int64Dtype() vs int64 distinction that produces silent nullability bugs when ignored.",
+      "Type casting includes nullable integer handling - the pd.Int64Dtype() vs int64 distinction that produces silent nullability bugs when ignored.",
     ],
     bullets: [
       "Multi-column sort with mixed directions",

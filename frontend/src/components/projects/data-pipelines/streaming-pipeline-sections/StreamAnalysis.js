@@ -9,12 +9,12 @@ const blocks = [
     caption: "Active Users per Event-Time Window",
     label: "Active User Engagement",
     text: [
-      "Estimates user engagement by computing the number of distinct active users within each event-time window. Rather than counting raw events, it focuses on unique user presence — a more meaningful measure of platform reach and retention.",
+      "Estimates user engagement by computing the number of distinct active users within each event-time window. Rather than counting raw events, it focuses on unique user presence - a more meaningful measure of platform reach and retention.",
       "The aggregation is performed independently from other Gold pipelines, ensuring that engagement logic remains isolated from traffic or revenue calculations.",
     ],
     bullets: [
-      "Distinct user count — not raw event volume",
-      "Independent Gold stream — isolated from revenue metrics",
+      "Distinct user count - not raw event volume",
+      "Independent Gold stream - isolated from revenue metrics",
       "Evaluates growth, adoption, and behavioral trends",
     ],
   },
@@ -27,7 +27,7 @@ const blocks = [
       "Built on the corrected Silver stream, it accurately reflects real user behavior even when events arrive late or out of order.",
     ],
     bullets: [
-      "Event-time windows — not wall-clock time",
+      "Event-time windows - not wall-clock time",
       "Late-arrival tolerant via watermarking",
       "Identifies activity spikes and seasonal patterns",
     ],
@@ -37,12 +37,12 @@ const blocks = [
     caption: "Purchase Events Segmented by Device",
     label: "Device-Based Segmentation",
     text: [
-      "Segments customer activity by device category — mobile, desktop, tablet — and reveals shifts in usage patterns over time. Aggregating events per device type within event-time windows supports product optimization and UX decisions.",
+      "Segments customer activity by device category - mobile, desktop, tablet - and reveals shifts in usage patterns over time. Aggregating events per device type within event-time windows supports product optimization and UX decisions.",
       "Its separation into an independent Gold pipeline ensures that segmentation logic does not interfere with core activity or revenue metrics.",
     ],
     bullets: [
-      "Device-level granularity — mobile, desktop, tablet",
-      "Independent stream — no cross-metric interference",
+      "Device-level granularity - mobile, desktop, tablet",
+      "Independent stream - no cross-metric interference",
       "Supports performance tuning and UX analysis",
     ],
   },
@@ -52,7 +52,7 @@ const blocks = [
     label: "Revenue per Window",
     text: [
       "Focuses exclusively on monetizable events and aggregates their values within event-time windows. By filtering only relevant event types, this stream isolates financial signals from general activity noise.",
-      "Duplicate or late purchase events do not inflate reported values — demonstrating how business-critical metrics can be derived safely from a streaming source without sacrificing correctness.",
+      "Duplicate or late purchase events do not inflate reported values - demonstrating how business-critical metrics can be derived safely from a streaming source without sacrificing correctness.",
     ],
     bullets: [
       "Filters only monetizable event types",

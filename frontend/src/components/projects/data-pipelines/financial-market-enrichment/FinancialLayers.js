@@ -3,12 +3,12 @@ const layers = [
     num: "01",
     title: "Bronze Layer",
     p: [
-      "The Bronze layer ingests three raw CSV sources — stock prices, earnings reports, and dividend records — converting them to Parquet with a fixed schema and no transformations applied. Data is stored as-is, preserving original values as a durable source of truth.",
+      "The Bronze layer ingests three raw CSV sources - stock prices, earnings reports, and dividend records - converting them to Parquet with a fixed schema and no transformations applied. Data is stored as-is, preserving original values as a durable source of truth.",
       "This layer exists to decouple raw ingestion from business logic. Keeping data untouched allows reprocessing from original records if anything goes wrong downstream, without any accumulated assumptions.",
     ],
     bullets: [
-      "Three independent ingestion paths — prices, earnings, dividends",
-      "No transformations — schema enforcement only",
+      "Three independent ingestion paths - prices, earnings, dividends",
+      "No transformations - schema enforcement only",
       "Parquet output for efficient downstream reads",
     ],
   },
@@ -17,10 +17,10 @@ const layers = [
     title: "Silver Layer",
     p: [
       "The Silver layer reads the three Bronze tables and applies type-casting, date parsing, and standardised column naming before joining prices, earnings, and dividends into a single denormalised table keyed on SYMBOL and DATE.",
-      "No aggregation or derived metrics are computed — only clean, consistently typed records. This unified table is the shared input for all Gold pipelines, ensuring every analytical layer operates from the same corrected and complete base.",
+      "No aggregation or derived metrics are computed - only clean, consistently typed records. This unified table is the shared input for all Gold pipelines, ensuring every analytical layer operates from the same corrected and complete base.",
     ],
     bullets: [
-      "Price-first left join — no trading day dropped",
+      "Price-first left join - no trading day dropped",
       "Explicit casting and UPPER_CASE aliasing for all columns",
       "Single shared contract for all downstream Gold pipelines",
     ],
@@ -30,11 +30,11 @@ const layers = [
     title: "Gold Layer",
     p: [
       "The Gold layer produces multiple co-dependent analytical outputs, each targeted at a specific analytical question: price movement and gaps, volume and liquidity, volatility, momentum, relative strength, market regime, earnings surprise, and market breadth.",
-      "Each pipeline is a separate analytical opportunity. Despite inter-Gold dependencies, each output can be consumed and analysed independently — the dependency graph enables compound signals without duplicating logic.",
+      "Each pipeline is a separate analytical opportunity. Despite inter-Gold dependencies, each output can be consumed and analysed independently - the dependency graph enables compound signals without duplicating logic.",
     ],
     bullets: [
       "7 independent analytical outputs from one Silver source",
-      "Inter-Gold reuse — later pipelines consume earlier Gold outputs",
+      "Inter-Gold reuse - later pipelines consume earlier Gold outputs",
       "Window functions for rolling metrics, LAG/LEAD for event windows",
     ],
   },
