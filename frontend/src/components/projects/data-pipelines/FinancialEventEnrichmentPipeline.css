@@ -1,0 +1,33 @@
+/* ============================================================
+   Financial Market Event Enrichment Pipeline — page-specific overrides.
+   All design classes live in JPMPipeline.css (jpm- prefix).
+   ProjectPage.css is imported for DataTable styles.
+============================================================ */
+
+/* Alternates the Layers section background so it doesn't merge
+   visually with the preceding Engineering Decisions section. */
+.jpm-chapters--alt {
+  background: #111;
+}
+
+/* Full-width output blocks for the Output & Use Cases section */
+.jpm-output-block {
+  padding: 52px 0;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.jpm-output-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.jpm-output-block p {
+  font-size: 1rem;
+  color: #9a9a9a;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.jpm-output-block strong {
+  color: #e8e8e8;
+}

@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import "./Banner.css";
 import React, { useState, useEffect, Suspense } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowDownCircleFill } from 'react-bootstrap-icons';

@@ -1,0 +1,488 @@
+/* ============================================================
+   JPM PIPELINE PAGE — REDESIGN
+   Isolated classes (jpm- prefix). Does not affect other pages.
+============================================================ */
+
+/* ---- Hero ---- */
+.jpm-hero {
+  position: relative;
+  min-height: 82vh;                  /* FIX 1: was 100vh — too much empty space */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;              /* FIX 1: was flex-end — content now centered vertically */
+  padding: 95px 8% 6% 8%;          /* FIX 1: padding-top = navbar height, bottom reduced */
+  overflow: hidden;
+}
+
+.jpm-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    150deg,
+    rgba(10, 10, 10, 0.88) 0%,    /* FIX 6: slightly less opaque to show more bg */
+    rgba(10, 10, 10, 0.72) 55%,
+    rgba(10, 10, 10, 0.5) 100%
+  );
+}
+
+.jpm-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+.jpm-hero-tag {
+  display: inline-block;
+  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff8400;
+  margin-bottom: 22px;
+}
+
+.jpm-hero-title {
+  font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.jpm-hero-sub {
+  font-size: 1.1rem;
+  color: #a0a0a0;                    /* FIX 6: was #909090 — slightly brighter */
+  line-height: 1.75;
+  max-width: 540px;
+  margin-bottom: 40px;
+}
+
+.jpm-hero-btn {
+  display: inline-block;
+  background: #ff8400;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.jpm-hero-btn:hover {
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+.jpm-hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  right: 8%;
+  z-index: 2;
+  font-size: 0.72rem;
+  color: #555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ---- Shared section label ---- */
+.jpm-section-label {
+  display: block;
+  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff8400;
+  margin-bottom: 14px;
+}
+
+/* ---- Architecture ---- */
+.jpm-arch {
+  background: #111;                  /* FIX 6: was #0f0f0f — slight contrast lift */
+  padding: 100px 8%;
+  border-top: 1px solid #252525;    /* FIX 6: was #1c1c1c — more visible separator */
+}
+
+.jpm-arch-header {
+  margin-bottom: 56px;
+}
+
+.jpm-arch-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.jpm-arch-flow {
+  display: flex;
+  align-items: stretch;             /* FIX 3: stretch so cards fill height equally */
+  gap: 0;
+                                    /* FIX 3: removed overflow-x: auto — no horizontal scroll */
+}
+
+.jpm-arch-step {
+  flex: 1;                          /* FIX 3: was fixed min-width — now fills available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 12px;
+  background: #191919;             /* FIX 6: was #141414 — slightly more visible */
+  border: 1px solid #2a2a2a;       /* FIX 6: was #222 — slightly brighter */
+  border-radius: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.jpm-arch-step:hover {
+  border-color: #ff8400;
+  transform: translateY(-5px);
+}
+
+.jpm-arch-num {
+  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ff8400;
+  margin-bottom: 10px;
+}
+
+.jpm-arch-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.jpm-arch-sub {
+  font-size: 0.73rem;
+  color: #666;                       /* FIX 6: was #555 — slightly more readable */
+  line-height: 1.45;
+  display: block;
+}
+
+.jpm-arch-arrow {
+  font-size: 1.1rem;
+  color: #363636;                    /* FIX 6: was #2e2e2e — slightly more visible */
+  padding: 0 10px;
+  flex-shrink: 0;
+  user-select: none;
+  align-self: center;
+}
+
+/* ---- Chapters (SparkLogic + YoYLogic) ---- */
+.jpm-chapters {
+  background: #0a0a0a;
+  padding: 100px 8%;
+  border-top: 1px solid #252525;    /* FIX 6 */
+}
+
+.jpm-chapters-header {
+  margin-bottom: 64px;
+}
+
+.jpm-chapters-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+/* FIX 4: chapters use flex so we can reverse direction per item */
+.jpm-chapter {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 52px 0;
+  border-bottom: 1px solid #1e1e1e; /* FIX 6: slightly brighter than #161616 */
+}
+
+.jpm-chapter:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* FIX 4: right-aligned chapter — content anchored to right side */
+.jpm-chapter--right {
+  flex-direction: row-reverse;
+  justify-content: flex-start;      /* flex-start in row-reverse = anchored right */
+}
+
+.jpm-chapter--right .jpm-chapter-body {
+  text-align: right;
+}
+
+.jpm-chapter--right .jpm-chapter-list li {
+  border-left: none;
+  border-right: 2px solid #ff8400;
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+.jpm-chapter-num {
+  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ff8400;
+  padding-top: 5px;
+  flex-shrink: 0;
+  width: 48px;
+}
+
+.jpm-chapter-body {
+  max-width: 680px;
+}
+
+.jpm-chapter-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.jpm-chapter-p {
+  font-size: 1rem;
+  color: #9a9a9a;                    /* FIX 6: was #888 — more readable */
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+.jpm-chapter-list {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0 0;
+}
+
+.jpm-chapter-list li {
+  font-size: 0.96rem;
+  color: #c0c0c0;                    /* FIX 6: was #bbb — slightly brighter */
+  padding: 9px 0 9px 18px;
+  border-left: 2px solid #ff8400;
+  margin-bottom: 8px;
+  transition: 0.5s;
+}
+
+.jpm-chapter-list li:hover {
+  scale: 1.03;
+  transition: 0.5s;
+}
+
+/* ---- Analysis ---- */
+.jpm-analysis {
+  background: #111;                  /* FIX 6 */
+  padding: 100px 8%;
+  border-top: 1px solid #252525;    /* FIX 6 */
+}
+
+.jpm-analysis-header {
+  margin-bottom: 70px;
+}
+
+.jpm-analysis-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px 0;
+}
+
+.jpm-analysis-header p {
+  font-size: 1rem;
+  color: #777;                       /* FIX 6: was #666 */
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+.jpm-analysis-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 64px 0;
+  border-bottom: 1px solid #1e1e1e; /* FIX 6 */
+}
+
+.jpm-analysis-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.jpm-analysis-block--rev {
+  direction: rtl;
+}
+
+.jpm-analysis-block--rev > * {
+  direction: ltr;
+}
+
+.jpm-analysis-img-wrap {
+  display: block;
+}
+
+.jpm-analysis-img-wrap img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                    /* FIX 5: removed border-color from transition */
+}
+
+/* FIX 5: glow instead of hard orange border rectangle */
+.jpm-analysis-img-wrap img:hover {
+  transform: scale(1.025);
+}
+
+.jpm-analysis-caption {
+  font-size: 0.9rem;
+  color: #555;                       /* FIX 6: was #444 */
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.jpm-analysis-text p {
+  font-size: 1rem;
+  color: #9a9a9a;                    /* FIX 6: was #888 */
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.jpm-analysis-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.jpm-analysis-list li {
+  font-size: 0.96rem;
+  color: #c0c0c0;                    /* FIX 6 */
+  padding: 9px 0 9px 18px;
+  border-left: 2px solid #ff8400;
+  margin-bottom: 8px;
+}
+
+/* ---- Takeaway ---- */
+.jpm-takeaway {
+  background: #0a0a0a;
+  padding: 100px 8%;
+  border-top: 1px solid #252525;    /* FIX 6 */
+}
+
+.jpm-takeaway-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 56px;
+}
+
+.jpm-takeaway-points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 760px;
+}
+
+.jpm-takeaway-point {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.jpm-takeaway-icon {
+  color: #ff8400;
+  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  padding-top: 5px;
+  user-select: none;
+}
+
+.jpm-takeaway-point p {
+  font-size: 1.05rem;
+  color: #9a9a9a;                    /* FIX 6: was #888 */
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+  .jpm-analysis-block,
+  .jpm-analysis-block--rev {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* FIX 1: reduce hero height on mobile */
+  .jpm-hero {
+    min-height: 65vh;
+    padding: 95px 6% 10% 6%;
+  }
+
+  .jpm-arch,
+  .jpm-chapters,
+  .jpm-analysis,
+  .jpm-takeaway {
+    padding: 70px 6%;
+  }
+
+  /* FIX 3: architecture goes vertical on mobile */
+  .jpm-arch-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .jpm-arch-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+    padding: 6px 0;
+    align-self: center;
+  }
+
+  /* FIX 4: chapters collapse to single column on mobile, always left-aligned */
+  .jpm-chapter,
+  .jpm-chapter--right {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .jpm-chapter--right .jpm-chapter-body {
+    text-align: left;
+  }
+
+  .jpm-chapter--right .jpm-chapter-list li {
+    border-left: 2px solid #ff8400;
+    border-right: none;
+    padding-left: 18px;
+    padding-right: 0;
+  }
+
+  .jpm-chapter-num {
+    padding-top: 0;
+  }
+
+  .jpm-hero-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .jpm-hero {
+    min-height: 60vh;
+    padding: 95px 5% 12% 5%;
+  }
+
+  .jpm-arch,
+  .jpm-chapters,
+  .jpm-analysis,
+  .jpm-takeaway {
+    padding: 56px 5%;
+  }
+}

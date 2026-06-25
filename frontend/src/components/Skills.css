@@ -1,0 +1,161 @@
+/************ Skills Css ************/
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+  background: linear-gradient(90.21deg, rgba(131, 54, 170, 0.5) -5.91%, rgba(132, 86, 1, 0.5) 111.58%);
+}
+.skill-bx {
+  background: rgba(21, 21, 21, 0.5);
+  border-radius: 64px;
+  text-align: center;
+  padding: 100px 90px;
+  margin: 80px auto;
+  max-width: 80%;
+}
+.skill h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.skill p {
+    color: #e3e3e3;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+
+.skill-section{
+  position: relative;
+  margin: 30px 0;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.single-chart {
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 90%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-opacity: 0.3;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #f06529;
+}
+.circular-chart.orange:hover .circle {
+  stroke: #ff7700;
+}
+.circular-chart.a-blue .circle {
+  stroke: #2965f1;
+}
+.circular-chart.a-blue:hover .circle {
+  stroke: #0099ff;
+}
+.circular-chart.r-blue .circle {
+  stroke: #41d5fb;
+}
+.circular-chart.r-blue:hover .circle {
+  stroke: #009dff;
+}
+.circular-chart.s-green .circle {
+  stroke: #6bb016;
+}
+.circular-chart.s-green:hover .circle {
+  stroke: #8cff00;
+}
+.circular-chart.p-yellow .circle {
+  stroke: #FFD43B;
+}
+.circular-chart.p-yellow:hover .circle {
+  stroke: #ffbf00;
+}
+.circular-chart.s-blue .circle {
+  stroke: #005e89;
+}
+.circular-chart.s-blue:hover .circle {
+  stroke: #01a8ce;
+}
+
+.percentage {
+  fill: #8b8b8b;
+  font-family: sans-serif;
+  font-size: 1.15em;
+  text-anchor: middle;
+}
+.percentage:hover {
+  fill: #a8a8a8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .skill-bx {
+    padding: 100px 30px;
+    max-width: 90%;
+  }
+  .flex-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skill-bx {
+    padding: 100px 15px;
+    max-width: 90%;
+  }
+  .skill p {
+    font-size: 1rem;
+  }
+  .flex-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .skill p {
+    font-size: 0.9rem;
+  }
+  .flex-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .skill-bx {
+    padding: 50px 10px;
+    max-width: 90%;
+  }
+  .flex-wrapper {
+    max-width: 90%;
+  }
+}

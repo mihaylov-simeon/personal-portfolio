@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
+import "./Skills.css";
 import 'react-multi-carousel/lib/styles.css';
 
 export const Skills = () => {

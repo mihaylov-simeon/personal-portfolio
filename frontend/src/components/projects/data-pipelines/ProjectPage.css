@@ -1,0 +1,957 @@
+/* ============================================================
+   Shared styles for old-style project pages (Stream + Financial).
+   Imported by StreamPipeline.js and FinancialEventEnrichmentPipeline.js.
+   Dead JPM-only classes removed — those pages now use JPMPipeline.css.
+============================================================ */
+
+:root {
+  --navbar-height: 95px;
+}
+
+/* =========================
+   SECTION DIVIDER
+========================= */
+
+.section-divider {
+  border: none;
+  height: 2px;
+  margin: 0;
+  background: linear-gradient(90deg, transparent, #555555, transparent);
+}
+
+/* =========================
+   OVERVIEW LAYOUT
+========================= */
+
+.overview-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(80vh - var(--navbar-height));
+  padding-top: var(--navbar-height);
+}
+
+/* =========================
+   LEFT PANEL (background set per-page in stream/financial CSS)
+========================= */
+
+.overview-title {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: left;
+  pointer-events: none;
+}
+
+.dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.9);
+  pointer-events: none;
+}
+
+.dark-overlay.active {
+  mask-image: radial-gradient(
+    circle 160px at var(--x) var(--y),
+    transparent 0%,
+    transparent 35%,
+    black 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 160px at var(--x) var(--y),
+    transparent 0%,
+    transparent 35%,
+    black 100%
+  );
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.overview-right {
+  position: relative;
+  padding: 80px 60px;
+  color: #fafafa;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.overview-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #e7e7e7;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overview-right:hover::before {
+  transform: scale(1);
+}
+
+.overview-right:hover {
+  color: #000000;
+}
+
+.overview-right > * {
+  position: relative;
+  z-index: 1;
+}
+
+.overview-content {
+  position: relative;
+  z-index: 1;
+}
+
+.overview-content h2 {
+  margin-left: 15px;
+}
+
+.overview-card {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  padding: 16px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* =========================
+   VIEW PROJECT BUTTON
+========================= */
+
+.view-project-btn {
+  background-color: #d36200;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.view-project-btn:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+/* =========================
+   ARCHITECTURE SECTION
+========================= */
+
+.architecture-section {
+  padding: 100px 0;
+  background: linear-gradient(
+    180deg,
+    #353535 0%,
+    #3a3a3a 5%,
+    #2e2e2e 40%,
+    #2e2e2e 75%,
+    #202020 100%
+  );
+  overflow: hidden;
+}
+
+.architecture-section .heading-p {
+  font-size: 7rem;
+  text-align: right;
+  color: #424242;
+  text-transform: uppercase;
+  margin: 0 30px -50px 0;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.architecture-section .heading-p:nth-child(1) {
+  margin-top: -100px;
+}
+
+.architecture-section .heading-p:nth-child(2) {
+  margin-bottom: 50px;
+}
+
+.architecture-section:hover .heading-p {
+  color: #bebebe;
+}
+
+.architecture-canvas {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  aspect-ratio: 1800 / 520;
+  margin: 0 auto;
+  transform-origin: top center;
+  transform: scale(0.8);
+}
+
+@media screen and (max-width: 1650px) {
+  .architecture-section {
+    display: none;
+  }
+}
+
+.module {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.architecture-arrows {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.architecture-arrows line {
+  stroke: #8a909aff;
+  stroke-width: 3.5;
+  transition: stroke-width 0.25s ease, opacity 0.25s ease;
+}
+
+/* Architecture hover scaling — stream and financial module classes only */
+.raw-data-stream,
+.spark-etl-stream,
+.bronze-layer-stream,
+.silver-layer-stream,
+.gold-layer-stream,
+.pandas-layer-stream,
+.raw-data-finance,
+.spark-etl-finance,
+.bronze-layer-finance,
+.silver-layer-finance,
+.gold-layer-finance,
+.pandas-layer-finance,
+.chart-output-finance {
+  transition: 0.3s ease-in-out;
+}
+
+.raw-data-stream:hover,
+.spark-etl-stream:hover,
+.bronze-layer-stream:hover,
+.silver-layer-stream:hover,
+.gold-layer-stream:hover,
+.pandas-layer-stream:hover,
+.raw-data-finance:hover,
+.spark-etl-finance:hover,
+.bronze-layer-finance:hover,
+.silver-layer-finance:hover,
+.gold-layer-finance:hover,
+.pandas-layer-finance:hover,
+.chart-output-finance:hover {
+  scale: 1.1;
+  transition: 0.3s ease-in-out;
+}
+
+.raw-data-stream:hover ~ .architecture-arrows .raw-spark,
+.raw-data-finance:hover ~ .architecture-arrows .raw-spark {
+  stroke-width: 2.5;
+}
+
+.spark-etl-stream:hover ~ .architecture-arrows .spark-bronze,
+.spark-etl-finance:hover ~ .architecture-arrows .spark-bronze {
+  stroke-width: 2.5;
+}
+
+.bronze-layer-stream:hover ~ .architecture-arrows .bronze-silver,
+.bronze-layer-finance:hover ~ .architecture-arrows .bronze-silver {
+  stroke-width: 2.5;
+}
+
+.silver-layer-stream:hover ~ .architecture-arrows .silver-gold,
+.silver-layer-finance:hover ~ .architecture-arrows .silver-gold {
+  stroke-width: 2.5;
+}
+
+.gold-layer-stream:hover ~ .architecture-arrows .gold-pandas,
+.gold-layer-finance:hover ~ .architecture-arrows .gold-pandas {
+  stroke-width: 2.5;
+}
+
+/* =========================
+   SPARK / LAYERS SECTION (stream + financial)
+========================= */
+
+.spark-section-stream {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  min-height: 100vh;
+  padding: 130px 80px 0 80px;
+  gap: 40px;
+  background: linear-gradient(
+    180deg,
+    #202020 0%,
+    #2e2e2e 8%,
+    #353535 35%,
+    #3a3a3a 55%,
+    #202020 100%
+  );
+}
+
+.spark-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  transition: 0.7s ease-in-out;
+}
+
+.spark-content:hover:nth-child(1),
+.spark-content:hover:nth-child(2),
+.spark-content:hover:nth-child(3) {
+  scale: 1.01;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-text {
+  grid-column: 1;
+  max-width: 720px;
+}
+
+.spark-ghost {
+  grid-column: 2;
+  text-align: right;
+  pointer-events: none;
+}
+
+.spark-ghost h2 {
+  font-size: 7rem;
+  line-height: 0.95;
+  margin: 0;
+  color: #505050;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-ghost h2:nth-child(1) {
+  margin-bottom: 15px;
+}
+
+.spark-content:hover:nth-child(1) h2,
+.spark-content:hover:nth-child(2) h2,
+.spark-content:hover:nth-child(3) h2 {
+  color: #bebebe;
+  transition: 0.3s ease-in-out;
+}
+
+.spark-ghost h2 + h2 {
+  margin-top: -20px;
+}
+
+.spark-card {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+.spark-content hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 30px;
+  background: linear-gradient(90deg, transparent, #676767, transparent);
+}
+
+/* =========================
+   ANALYSIS SECTION
+========================= */
+
+.analysis-section {
+  display: grid;
+  min-height: 100vh;
+  padding: 0 90px 0 90px;
+  background: linear-gradient(
+    180deg,
+    #202020 0%,
+    #353535 35%,
+    #3a3a3a 55%,
+    #202020 100%
+  );
+}
+
+.analysis-section:hover .analysis-card-title h2 {
+  color: #bebebe;
+  transition: 0.3s ease-in-out;
+}
+
+.analysis-content-stream {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.analysis-content-stream hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 30px;
+  margin-top: 100px;
+  background: linear-gradient(90deg, transparent, #676767, transparent);
+}
+
+.analysis-card {
+  font-size: 1.2rem;
+  max-width: 730px;
+}
+
+.analysis-card-title h2 {
+  font-size: 7rem;
+  line-height: 0.95;
+  margin: 0;
+  color: #505050;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  justify-self: end;
+}
+
+.analysis-explanation-table {
+  font-size: 1.2rem;
+  max-width: 730px;
+  justify-self: end;
+}
+
+.analysis-table-img {
+  filter: grayscale(100%);
+  max-width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.analysis-table-img:hover {
+  filter: grayscale(0%);
+  scale: 1.05;
+  transition: 0.5s ease-in-out;
+}
+
+/* =========================
+   TAKEAWAY SECTION
+========================= */
+
+.takeaway-section {
+  display: grid;
+  background: linear-gradient(
+    180deg,
+    #202020 0%,
+    #353535 35%,
+    #353535 55%,
+    #202020 100%
+  );
+}
+
+.takeaway-content,
+.takeaway-content-stream {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 90px 0 90px;
+  margin-top: 80px;
+}
+
+.takeaway-content hr,
+.takeaway-content-stream hr {
+  grid-column: 1 / -1;
+  border: none;
+  height: 30px;
+  margin: 100px 0 50px 0;
+  background: linear-gradient(90deg, transparent, #676767, transparent);
+}
+
+.takeaway-card-title.engineering-decisions h2 {
+  text-align: center;
+}
+
+.takeaway-content.engineering-desicions.output-and-use {
+  grid-template-columns: 1fr;
+  margin-top: 0;
+}
+
+.engineering-desicions hr {
+  margin: 19px;
+  height: 15px;
+}
+
+.takeaway-card.engineering-desicions {
+  transition: 0.5s;
+}
+
+.takeaway-card.engineering-desicions:hover {
+  scale: 1.03;
+  transition: 0.5s;
+  opacity: 80%;
+  color: #fffaf6;
+}
+
+.engineering-decisions {
+  padding: 80px;
+}
+
+.engineering-decisions * strong {
+  color: #ff8400;
+}
+
+.takeaway-card {
+  font-size: 1.2rem;
+  max-width: 90%;
+  justify-self: center;
+}
+
+.takeaway-card-title h2 {
+  font-size: 7rem;
+  line-height: 0.95;
+  margin: 0;
+  color: #505050;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.takeaway-section:hover h2 {
+  color: #bebebe;
+  transition: 0.3s ease-in-out;
+}
+
+/* =========================
+   OUTPUT DATA TABLE
+========================= */
+
+.output-data-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+.output-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #e8e8e8;
+  white-space: nowrap;
+}
+
+.output-data-table thead th {
+  color: #ff8400;
+  font-weight: 600;
+  text-align: left;
+  padding: 4px 10px;
+  border-bottom: 1px solid #666666;
+  border-right: 1px solid #4e4e4e;
+  letter-spacing: 0.03em;
+}
+
+.output-data-table thead th:last-child {
+  border-right: none;
+}
+
+.output-data-table tbody td {
+  padding: 3px 10px;
+  border-bottom: 1px solid #666666;
+  border-right: 1px solid #4e4e4e;
+}
+
+.output-data-table tbody td:last-child {
+  border-right: none;
+}
+
+.output-data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 1710px) {
+  .spark-ghost h2 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .spark-card {
+    font-size: 1.1rem;
+  }
+
+  .spark-section-stream {
+    gap: 40px;
+  }
+
+  .analysis-card-title h2 {
+    font-size: 5.5rem;
+    line-height: 0.9;
+    margin-bottom: 15px;
+  }
+
+  .analysis-table-img {
+    transform: scale(0.8);
+  }
+
+  .analysis-card {
+    font-size: 1.1rem;
+  }
+
+  .takeaway-card-title h2 {
+    font-size: 5.5rem;
+    line-height: 0.9;
+    margin-bottom: 15px;
+  }
+
+  .takeaway-card {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .takeaway-card-title h2 {
+    font-size: 5.5rem;
+    line-height: 0.9;
+    margin-bottom: 15px;
+  }
+
+  .takeaway-card {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .overview-section {
+    display: block;
+    padding: 150px 30px 30px 30px;
+  }
+
+  .overview-title {
+    text-align: center;
+  }
+
+  .section-divider {
+    display: none;
+  }
+
+  .spark-section-stream,
+  .analysis-section,
+  .takeaway-section {
+    display: block;
+    padding: 30px 30px;
+    overflow-x: hidden;
+  }
+
+  .spark-content,
+  .analysis-content-stream,
+  .takeaway-content,
+  .takeaway-content-stream {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .analysis-content-stream,
+  .takeaway-content,
+  .takeaway-content-stream {
+    margin-top: 0;
+  }
+
+  .spark-content {
+    margin-bottom: 30px;
+  }
+
+  .analysis-ghost {
+    order: -1;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .analysis-text {
+    order: 1;
+    text-align: center;
+  }
+
+  .spark-text,
+  .analysis-card,
+  .analysis-explanation-table,
+  .takeaway-card {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: unset;
+    grid-column: unset;
+    text-align: center;
+  }
+
+  .spark-ghost {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .spark-text,
+  .analysis-explanation-table,
+  .takeaway-card {
+    order: 1;
+    text-align: center;
+  }
+
+  .analysis-table-img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    filter: grayscale(0%);
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .overview-content .overview-card,
+  .overview-btn-wrapper {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .overview-content h2 {
+    margin-left: 0;
+  }
+
+  p,
+  .spark-card,
+  .analysis-card {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .spark-content hr,
+  .analysis-content-stream hr,
+  .takeaway-content hr,
+  .takeaway-content-stream hr {
+    display: none;
+  }
+
+  .engineering-decisions {
+    padding: 30px;
+  }
+
+  .output-data-table {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .overview-section,
+  .spark-section-stream,
+  .analysis-section,
+  .takeaway-section {
+    min-height: auto;
+  }
+
+  .spark-content,
+  .analysis-content-stream,
+  .takeaway-content,
+  .takeaway-content-stream {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .spark-content {
+    margin-bottom: 0;
+  }
+
+  .analysis-section {
+    padding-bottom: 5px;
+  }
+
+  .takeaway-section {
+    padding-top: 5px;
+  }
+
+  .spark-ghost,
+  .analysis-card-title,
+  .takeaway-card-title {
+    order: -1;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .spark-ghost h2,
+  .analysis-card-title h2,
+  .takeaway-card-title h2 {
+    font-size: 3.4rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .spark-text,
+  .analysis-card,
+  .analysis-explanation-table,
+  .takeaway-card {
+    max-width: 100%;
+    justify-self: start;
+    margin-bottom: 24px;
+  }
+
+  .spark-card,
+  .analysis-card,
+  .analysis-explanation-table,
+  .takeaway-card {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .overview-section {
+    grid-template-columns: 1fr;
+    padding-top: var(--navbar-height);
+  }
+
+  .overview-left-stream,
+  .financial-overview-left {
+    min-height: 40vh;
+  }
+
+  .overview-title {
+    font-size: 2rem;
+    padding: 0 16px;
+  }
+
+  .overview-right {
+    padding: 30px 30px;
+  }
+
+  .architecture-section {
+    padding: 60px 0;
+    overflow-x: hidden;
+  }
+
+  .architecture-section .heading-p {
+    font-size: 3rem;
+    text-align: left;
+    margin: 0 16px 20px 16px;
+  }
+
+  .architecture-canvas {
+    transform: scale(0.7);
+    transform-origin: top left;
+    width: 100%;
+    height: auto;
+  }
+
+  .analysis-table-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .analysis-section {
+    padding: 40px 24px;
+  }
+
+  .analysis-card-title {
+    margin-bottom: 0;
+  }
+
+  .analysis-card-title h2 {
+    justify-self: center;
+    line-height: 0.9;
+    margin-bottom: 5px;
+  }
+
+  .analysis-content-stream {
+    margin-top: 0;
+  }
+
+  .takeaway-content,
+  .takeaway-content-stream {
+    padding: 0 24px;
+  }
+
+  .engineering-decisions {
+    padding: 24px;
+  }
+
+  .output-data-table {
+    font-size: 0.75rem;
+  }
+
+  .output-data-table thead th,
+  .output-data-table tbody td {
+    padding: 3px 8px;
+  }
+
+  .output-data-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .takeaway-text,
+  .takeaway-ghost {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .spark-content hr,
+  .analysis-content-stream hr,
+  .takeaway-content hr,
+  .takeaway-content-stream hr {
+    margin-top: 40px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .spark-ghost h2,
+  .analysis-card-title h2,
+  .takeaway-card-title h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .engineering-decisions {
+    padding: 16px;
+  }
+
+  .architecture-canvas {
+    transform: scale(0.45);
+  }
+
+  .output-data-table {
+    font-size: 0.65rem;
+  }
+
+  .output-data-table thead th,
+  .output-data-table tbody td {
+    padding: 2px 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .spark-ghost h2,
+  .analysis-card-title h2,
+  .takeaway-card-title h2 {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .engineering-decisions {
+    padding: 12px;
+  }
+
+  .output-data-table {
+    font-size: 0.55rem;
+  }
+
+  .output-data-table thead th,
+  .output-data-table tbody td {
+    padding: 2px 4px;
+  }
+}

@@ -1,3 +1,4 @@
+import "./Contact.css";
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import astronaut from "../assets/img/astronaut-contact-img.webp";

@@ -45,7 +45,7 @@ app.post("/api/contact", async (req, res) => {
 
     const name = `${firstName || ""} ${lastName || ""}`.trim();
 
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Portfolio Contact <contact@smcodelab.com>",
       to: [process.env.CONTACT_TO],
       reply_to: email,
@@ -58,6 +58,16 @@ app.post("/api/contact", async (req, res) => {
         <p>${message}</p>
       `,
     });
+
+    if (error) {
+      console.error("Resend API error:", error);
+      return res.status(500).json({
+        success: false,
+        message: "Failed to send message",
+      });
+    }
+
+    console.log("Email sent, id:", data?.id);
 
     res.status(200).json({
       success: true,

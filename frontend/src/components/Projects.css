@@ -1,0 +1,124 @@
+/************ Projects Section Css ************/
+.project {
+  padding: 80px 0;
+  position: relative;
+  background-color: #0e0e0e;
+}
+
+.project h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  max-width: 80%;
+}
+.project .nav.nav-pills {
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(50, 50, 50);
+  overflow: hidden;
+}
+.project .nav.nav-pills .nav-item {
+  width: 50%;
+}
+
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.project .nav.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #842a60 -5.91%, #ad5f01 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(172, 172, 172, 0.5);
+}
+.nav-link#projects-tabs-tab-first {
+  border: none;
+}
+.nav-link#projects-tabs-tab-first:hover, .nav-link#projects-tabs-tab-second:hover {
+  background-color: #ad5f01;
+  color: #ffffff;
+}
+.nav-link#projects-tabs-tab-second {
+  border-left: 1px solid rgba(172, 172, 172, 0.5);
+  border-right: 1px solid rgba(172, 172, 172, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .project p {
+    font-size: 1rem;
+  }
+
+  .project .nav.nav-pills .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .skill h2,
+  .project h2,
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .project p {
+    font-size: 0.9rem;
+  }
+
+  .project .nav.nav-pills .nav-link {
+    font-size: 0.65rem;
+  }
+
+  #projects-tabs-tabpane-first > div > div {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project p {
+    font-size: 0.9rem;
+  }
+
+  .project .nav.nav-pills .nav-link {
+    font-size: 0.65rem;
+  }
+
+  #projects-tabs-tabpane-first > div > div {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #projects-tabs-tabpane-first > div > div {
+    padding: 30px;
+  }
+}

@@ -1,3 +1,4 @@
+import "./Footer.css";
 import { Container, Row, Col, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";

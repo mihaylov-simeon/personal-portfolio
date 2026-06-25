@@ -7,9 +7,10 @@ import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
-import { JPMPipeline } from "./components/JPMPipeline";
-import { StreamPipeline } from "./components/StreamPipeline"
-import { FinancialEventEnrichmentPipeline } from "./components/FinancialEventEnrichmentPipeline"
+import { JPMPipeline } from "./components/projects/data-pipelines/JPMPipeline";
+import { StreamPipeline } from "./components/projects/data-pipelines/StreamPipeline";
+import { FinancialEventEnrichmentPipeline } from "./components/projects/data-pipelines/FinancialEventEnrichmentPipeline";
+import { DataDict } from "./components/projects/data-tools/DataDict";
 
 import { MainLayout } from "./layouts/MainLayout";
 import { ProjectLayout } from "./layouts/ProjectLayout";
@@ -76,9 +77,13 @@ function App() {
             path="streaming-pipeline"
             element={<StreamPipeline />}
           />
-          <Route 
+          <Route
             path="financial-event-enrichment"
             element={<FinancialEventEnrichmentPipeline/>}
+          />
+          <Route
+            path="data-dict"
+            element={<DataDict />}
           />
         </Route>
 

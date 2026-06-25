@@ -1,4 +1,5 @@
-import { Overview } from './jpm-pipeline-sections/Overview'
+import "./JPMPipeline.css";
+import { Overview } from './jpm-pipeline-sections/Overview';
 import { Architecture } from './jpm-pipeline-sections/Architecture';
 import { SparkLogic } from './jpm-pipeline-sections/SparkLogic';
 import { YoYLogic } from './jpm-pipeline-sections/YoYLogic';
@@ -7,17 +8,13 @@ import { Takeaway } from './jpm-pipeline-sections/Takeaway';
 
 export const JPMPipeline = () => {
   return (
-    <section className="jpm_pipeline" id="jpm-p">
+    <section id="jpm-p">
       <Overview />
       <Architecture />
-      <hr className="section-divider" />
       <SparkLogic />
-      <hr className="section-divider" />
       <YoYLogic />
-      <hr className="section-divider" />
       <Analysis />
-      <hr className="section-divider" />
       <Takeaway />
     </section>
-  )
+  );
 };

@@ -1,0 +1,111 @@
+/************ Footer Css ************/
+.footer {
+  padding: 30px 0;
+  background-color: rgb(0, 0, 0);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer--project {
+  padding: 10px 0;
+  background-color: #202020;
+}
+
+.footer img {
+  max-width: 80%;
+}
+
+.footer .social-icon {
+  margin-top: 20px;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.footer .navbar-brand {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  margin-top: 20px;
+}
+
+.footer .navbar-brand a {
+  text-decoration: none;
+}
+
+.footer .fa-terminal {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Centra';
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.footer a.navbar-brand .sm {
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Centra';
+    font-weight: 400;
+}
+
+.footer a.navbar-brand .highlight {
+  color: #ff8400;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  margin: 20px 0 20px 0;
+}
+
+.footer .footer-links a:last-child {
+  margin-right: 0;
+}
+
+.footer .footer-links a:hover {
+  color: #ff8400;
+}
+
+@media screen and (max-width: 576px) {
+  .footer .navbar-brand {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fa-terminal,
+  .footer .navbar-brand span {
+    display: inline-block;
+  }
+
+  .footer .social-icon {
+    text-align: center;
+    margin: 20px 0 30px 0;
+  }
+
+  .footer .footer-links,
+  .footer .social-icon {
+    margin-top: 20px;
+  }
+
+  .footer .footer-links {
+    justify-content: center;
+  }
+}

@@ -1,20 +1,20 @@
+import "./ProjectPage.css";
+import "./JPMPipeline.css";
+import "./FinancialEventEnrichmentPipeline.css";
 import { FinancialOverview } from './financial-market-enrichment/FinancialOverview'
 import { FinancialArchitecture } from './financial-market-enrichment/FinancialArchitecture'
-import { FinancialLayers } from './financial-market-enrichment/FinancialLayers'
 import { FinancialKeyEngineeringDecisions } from './financial-market-enrichment/FinancialKeyEngineeringDecisions'
+import { FinancialLayers } from './financial-market-enrichment/FinancialLayers'
 import { FinancialOutputAndUseCases } from  './financial-market-enrichment/FinancialOutputAndUseCases'
 
 export const FinancialEventEnrichmentPipeline = () => {
   return (
-    <section className="financial-event-enrichment">
+    <section>
       <FinancialOverview />
       <FinancialArchitecture />
-      <hr className="section-divider" />
       <FinancialKeyEngineeringDecisions />
-      <hr className="section-divider" />
       <FinancialLayers />
-      <hr className="section-divider" />
       <FinancialOutputAndUseCases />
     </section>
-  )
+  );
 };
