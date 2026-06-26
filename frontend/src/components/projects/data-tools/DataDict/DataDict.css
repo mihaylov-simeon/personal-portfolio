@@ -63,9 +63,9 @@
 .dd-hero-btn {
   display: inline-block;
   background: #ff8400;
-  color: #000;
-  font-weight: 700;
-  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   padding: 14px 28px;
   border-radius: 4px;
@@ -77,6 +77,8 @@
   background: #fff;
   color: #000;
   text-decoration: none;
+  scale: 1.05;
+  transition: background 0.5s, color 0.2s;
 }
 
 .dd-hero-scroll {

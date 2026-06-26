@@ -12,14 +12,13 @@ export const Skills = () => {
               <h2>Technologies</h2>
 
               <p>
-                I build batch and streaming data pipelines using PySpark and medallion architecture, 
-                focusing on correctness, scalability, and real-world data processing challenges.
-                My work includes distributed transformations, event-driven processing, and designing 
-                systems that convert raw data into structured, analytics-ready outputs.
+                Building data pipelines requires specific knowledge and tools so the data<br />
+                can be reliable, correct, and easy to process. The tools I use help me build<br />
+                scalable pipelines that convert raw data into structured, analytics-ready <br />
+                outputs which solve real-world data challenges.
               </p>
 
               <div className="skill-section">
-                {/* ================= Row 1 ================= */}
                 <div className="flex-wrapper">
                   {/* Spark */}
                   <div className="single-chart">
@@ -52,7 +51,6 @@ export const Skills = () => {
                   </div>
                 </div>
 
-                {/* ================= Row 2 ================= */}
                 <div className="flex-wrapper">
                   {/* Airflow */}
                   <div className="single-chart">

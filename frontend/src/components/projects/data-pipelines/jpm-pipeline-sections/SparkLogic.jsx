@@ -10,7 +10,7 @@ const chapters = [
       "Time-ordered data per business category",
       "Comparable values across reporting periods",
       "Explicit year-over-year (YoY) change metrics",
-      "Stable structure for analytics & visualization",
+      "Consistent and analytics-ready",
     ],
   },
   {
@@ -18,10 +18,10 @@ const chapters = [
     title: "Data Normalization",
     paragraphs: [
       "Raw financial data is often inconsistent in schema, formatting, and data types - making analysis and comparison difficult.",
-      "This stage ensures schema stability, consistent date handling, and uniform numeric precision across the entire dataset.",
+      "This stage ensures schema stability, consistent date handling, and numeric precision across the entire dataset.",
     ],
     bullets: [
-      "UnionByName across heterogeneous sources",
+      "UnionByName across different sources",
       "Standardized date formats for time-based comparison",
       "Cleaned and normalized categorical fields",
       "Typed numeric values using Decimal precision",
@@ -31,8 +31,8 @@ const chapters = [
     num: "03",
     title: "Metric Derivation",
     paragraphs: [
-      "Once the dataset is normalized, analytical metrics are derived using deterministic window-based transformations.",
-      "These calculations enable accurate trend analysis and year-over-year comparisons while preserving raw data lineage.",
+      "Once the dataset is normalized, analytical metrics are derived using window-based transformations.",
+      "These calculations enable accurate trend analysis and YoY comparisons while preserving RAW data lineage.",
     ],
     bullets: [
       "Partitioned window functions by category",

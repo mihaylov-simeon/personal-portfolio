@@ -16,9 +16,9 @@ export const Projects = () => {
             <h2>Projects</h2>
 
             <p>
-              A selection of data-focused projects showcasing end-to-end pipelines
-              and practical tools. Each project emphasizes clarity, correctness,
-              and real-world applicability.
+              A small selection of meaningful projects showcasing End-to-end data pipelines
+              and data-related tools. Each project strives to demonstrate different skills and 
+              solve real-world data problems.
             </p>
 
             <Tab.Container id="projects-tabs" defaultActiveKey="first">

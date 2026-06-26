@@ -3,25 +3,25 @@ const layers = [
     num: "01",
     title: "Bronze Layer",
     p: [
-      "The Bronze layer ingests raw customer events as a continuous stream, enforcing a fixed schema while preserving the original event payload. Data is written in an append-only, replayable manner with no business logic applied, allowing the layer to function as a durable source of truth.",
+      "The Bronze layer ingests raw customer events as a continuous stream, enforcing a fixed schema while preserving the original event payload. Data is written in an append-only manner with no business logic applied, allowing the layer to function as a SPoT.",
       "Checkpointed streaming ingestion ensures fault tolerance and enables deterministic reprocessing of downstream layers when needed.",
     ],
     bullets: [
-      "Schema enforcement on ingest - no silent type coercion",
+      "Schema enforcement on ingest - no automatic schema infer",
       "Append-only writes for full replayability",
-      "Checkpoint-backed fault tolerance",
+      "Fault-tolerance using checkpoints",
     ],
   },
   {
     num: "02",
     title: "Silver Layer",
     p: [
-      "The Silver layer enforces event-time correctness by resolving the core challenges of streaming data: out-of-order events, duplicates, and late arrivals. Events are deterministically deduplicated using a unique identifier and ordered by event-time semantics rather than processing time.",
-      "Watermarks are applied to bound state growth and define clear late-data handling rules, producing a consistent and analytically reliable stream for downstream aggregation.",
+      "The Silver layer enforces event-time correctness by resolving the core challenges of streaming data: out-of-order events, duplicate events, and late arrivals. Events are deterministically deduplicated using a unique identifier and ordered by event-time semantics rather than processing time.",
+      "Watermarks are applied to define clear late-data handling rules, producing a consistent data stream, ready for downstream aggregation.",
     ],
     bullets: [
-      "Stateful deduplication via unique event identifiers",
-      "Watermark-bounded state for controlled late-data cutoff",
+      "Deduplication achieved using unique event identifiers",
+      "Watermarked state for controlled late-data arrivals",
       "Event-time ordering over processing-time ordering",
     ],
   },
@@ -30,7 +30,7 @@ const layers = [
     title: "Gold Layer",
     p: [
       "The Gold layer produces analytics-ready outputs from the corrected event stream, with each stream designed to answer a specific analytical question. Windowed aggregations are computed and written as independent, append-only outputs.",
-      "By isolating analytical concerns across multiple Gold streams, the pipeline maintains scalability, flexibility, and fault containment - each metric can evolve independently.",
+      "By isolating analytical concerns across Gold streams, the pipeline remains easy to scale, flexable, and fault free.",
     ],
     bullets: [
       "Active users per window - engagement signal",

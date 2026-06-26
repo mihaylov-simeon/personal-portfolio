@@ -1,18 +1,13 @@
-/* ============================================================
-   JPM PIPELINE PAGE - REDESIGN
-   Isolated classes (jpm- prefix). Does not affect other pages.
-============================================================ */
-
 /* ---- Hero ---- */
 .jpm-hero {
   position: relative;
-  min-height: 82vh;                  /* FIX 1: was 100vh - too much empty space */
+  min-height: 82vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;              /* FIX 1: was flex-end - content now centered vertically */
-  padding: 95px 8% 6% 8%;          /* FIX 1: padding-top = navbar height, bottom reduced */
+  align-items: center;
+  padding: 95px 8% 6% 8%;
   overflow: hidden;
 }
 
@@ -21,7 +16,7 @@
   inset: 0;
   background: linear-gradient(
     150deg,
-    rgba(10, 10, 10, 0.88) 0%,    /* FIX 6: slightly less opaque to show more bg */
+    rgba(10, 10, 10, 0.88) 0%,
     rgba(10, 10, 10, 0.72) 55%,
     rgba(10, 10, 10, 0.5) 100%
   );
@@ -35,7 +30,7 @@
 
 .jpm-hero-tag {
   display: inline-block;
-  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -53,7 +48,7 @@
 
 .jpm-hero-sub {
   font-size: 1.1rem;
-  color: #a0a0a0;                    /* FIX 6: was #909090 - slightly brighter */
+  color: #a0a0a0;
   line-height: 1.75;
   max-width: 540px;
   margin-bottom: 40px;
@@ -62,9 +57,9 @@
 .jpm-hero-btn {
   display: inline-block;
   background: #ff8400;
-  color: #000;
-  font-weight: 700;
-  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   padding: 14px 28px;
   border-radius: 4px;
@@ -76,6 +71,8 @@
   background: #fff;
   color: #000;
   text-decoration: none;
+  scale: 1.05;
+  transition: background 0.2s, color 0.2s;
 }
 
 .jpm-hero-scroll {
@@ -89,10 +86,9 @@
   text-transform: uppercase;
 }
 
-/* ---- Shared section label ---- */
 .jpm-section-label {
   display: block;
-  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -102,9 +98,9 @@
 
 /* ---- Architecture ---- */
 .jpm-arch {
-  background: #111;                  /* FIX 6: was #0f0f0f - slight contrast lift */
+  background: #111;
   padding: 100px 8%;
-  border-top: 1px solid #252525;    /* FIX 6: was #1c1c1c - more visible separator */
+  border-top: 1px solid #252525;
 }
 
 .jpm-arch-header {
@@ -120,21 +116,20 @@
 
 .jpm-arch-flow {
   display: flex;
-  align-items: stretch;             /* FIX 3: stretch so cards fill height equally */
+  align-items: stretch;
   gap: 0;
-                                    /* FIX 3: removed overflow-x: auto - no horizontal scroll */
 }
 
 .jpm-arch-step {
-  flex: 1;                          /* FIX 3: was fixed min-width - now fills available space */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 28px 12px;
-  background: #191919;             /* FIX 6: was #141414 - slightly more visible */
-  border: 1px solid #2a2a2a;       /* FIX 6: was #222 - slightly brighter */
+  background: #191919;
+  border: 1px solid #2a2a2a;
   border-radius: 8px;
   transition: border-color 0.2s, transform 0.2s;
   cursor: default;
@@ -146,7 +141,7 @@
 }
 
 .jpm-arch-num {
-  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: #ff8400;
@@ -163,25 +158,25 @@
 
 .jpm-arch-sub {
   font-size: 0.73rem;
-  color: #666;                       /* FIX 6: was #555 - slightly more readable */
+  color: #666;
   line-height: 1.45;
   display: block;
 }
 
 .jpm-arch-arrow {
   font-size: 1.1rem;
-  color: #363636;                    /* FIX 6: was #2e2e2e - slightly more visible */
+  color: #363636;
   padding: 0 10px;
   flex-shrink: 0;
   user-select: none;
   align-self: center;
 }
 
-/* ---- Chapters (SparkLogic + YoYLogic) ---- */
+/* ---- SparkLogic + YoYLogic ---- */
 .jpm-chapters {
   background: #0a0a0a;
   padding: 100px 8%;
-  border-top: 1px solid #252525;    /* FIX 6 */
+  border-top: 1px solid #252525;
 }
 
 .jpm-chapters-header {
@@ -195,13 +190,12 @@
   margin: 0;
 }
 
-/* FIX 4: chapters use flex so we can reverse direction per item */
 .jpm-chapter {
   display: flex;
   align-items: flex-start;
   gap: 36px;
   padding: 52px 0;
-  border-bottom: 1px solid #1e1e1e; /* FIX 6: slightly brighter than #161616 */
+  border-bottom: 1px solid #1e1e1e;
 }
 
 .jpm-chapter:last-child {
@@ -209,10 +203,9 @@
   padding-bottom: 0;
 }
 
-/* FIX 4: right-aligned chapter - content anchored to right side */
 .jpm-chapter--right {
   flex-direction: row-reverse;
-  justify-content: flex-start;      /* flex-start in row-reverse = anchored right */
+  justify-content: flex-start;
 }
 
 .jpm-chapter--right .jpm-chapter-body {
@@ -227,7 +220,7 @@
 }
 
 .jpm-chapter-num {
-  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 3px;
   color: #ff8400;
@@ -249,7 +242,7 @@
 
 .jpm-chapter-p {
   font-size: 1rem;
-  color: #9a9a9a;                    /* FIX 6: was #888 - more readable */
+  color: #9a9a9a;
   line-height: 1.85;
   margin-bottom: 14px;
 }
@@ -262,7 +255,7 @@
 
 .jpm-chapter-list li {
   font-size: 0.96rem;
-  color: #c0c0c0;                    /* FIX 6: was #bbb - slightly brighter */
+  color: #c0c0c0;
   padding: 9px 0 9px 18px;
   border-left: 2px solid #ff8400;
   margin-bottom: 8px;
@@ -276,9 +269,9 @@
 
 /* ---- Analysis ---- */
 .jpm-analysis {
-  background: #111;                  /* FIX 6 */
+  background: #111;
   padding: 100px 8%;
-  border-top: 1px solid #252525;    /* FIX 6 */
+  border-top: 1px solid #252525;
 }
 
 .jpm-analysis-header {
@@ -294,7 +287,7 @@
 
 .jpm-analysis-header p {
   font-size: 1rem;
-  color: #777;                       /* FIX 6: was #666 */
+  color: #777;
   max-width: 560px;
   line-height: 1.75;
 }
@@ -305,7 +298,7 @@
   gap: 64px;
   align-items: center;
   padding: 64px 0;
-  border-bottom: 1px solid #1e1e1e; /* FIX 6 */
+  border-bottom: 1px solid #1e1e1e;
 }
 
 .jpm-analysis-block:last-child {
@@ -330,17 +323,15 @@
   border-radius: 8px;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-                                    /* FIX 5: removed border-color from transition */
 }
 
-/* FIX 5: glow instead of hard orange border rectangle */
 .jpm-analysis-img-wrap img:hover {
   transform: scale(1.025);
 }
 
 .jpm-analysis-caption {
   font-size: 0.9rem;
-  color: #555;                       /* FIX 6: was #444 */
+  color: #555;
   margin-top: 12px;
   letter-spacing: 0.5px;
   text-align: center;
@@ -348,7 +339,7 @@
 
 .jpm-analysis-text p {
   font-size: 1rem;
-  color: #9a9a9a;                    /* FIX 6: was #888 */
+  color: #9a9a9a;
   line-height: 1.85;
   margin-bottom: 16px;
 }
@@ -361,7 +352,7 @@
 
 .jpm-analysis-list li {
   font-size: 0.96rem;
-  color: #c0c0c0;                    /* FIX 6 */
+  color: #c0c0c0; 
   padding: 9px 0 9px 18px;
   border-left: 2px solid #ff8400;
   margin-bottom: 8px;
@@ -371,7 +362,7 @@
 .jpm-takeaway {
   background: #0a0a0a;
   padding: 100px 8%;
-  border-top: 1px solid #252525;    /* FIX 6 */
+  border-top: 1px solid #252525;
 }
 
 .jpm-takeaway-title {
@@ -397,14 +388,14 @@
 
 .jpm-takeaway-icon {
   color: #ff8400;
-  font-size: 1rem;                   /* FIX 2: orange text → 1rem */
+  font-size: 1rem;
   padding-top: 5px;
   user-select: none;
 }
 
 .jpm-takeaway-point p {
   font-size: 1.05rem;
-  color: #9a9a9a;                    /* FIX 6: was #888 */
+  color: #9a9a9a;
   line-height: 1.85;
   margin: 0;
 }
@@ -420,7 +411,6 @@
 }
 
 @media (max-width: 768px) {
-  /* FIX 1: reduce hero height on mobile */
   .jpm-hero {
     min-height: 65vh;
     padding: 95px 6% 10% 6%;
@@ -433,7 +423,6 @@
     padding: 70px 6%;
   }
 
-  /* FIX 3: architecture goes vertical on mobile */
   .jpm-arch-flow {
     flex-direction: column;
     align-items: stretch;
@@ -446,7 +435,6 @@
     align-self: center;
   }
 
-  /* FIX 4: chapters collapse to single column on mobile, always left-aligned */
   .jpm-chapter,
   .jpm-chapter--right {
     flex-direction: column;

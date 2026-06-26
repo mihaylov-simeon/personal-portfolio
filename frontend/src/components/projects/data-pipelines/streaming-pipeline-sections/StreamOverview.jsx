@@ -14,8 +14,9 @@ export const StreamOverview = () => {
           Real-time Event<br />Streaming Pipeline
         </h1>
         <p className="jpm-hero-sub">
-          Production-grade streaming pipeline processing high-volume customer events
-          with event-time correctness, stateful deduplication, watermarking,
+          Production-rady streaming pipeline processing high-volume customer events
+          with the possibility for resource scaling and
+          with event-time correctness, deduplication, watermarking,
           and exactly-once guarantees.
         </p>
         <a

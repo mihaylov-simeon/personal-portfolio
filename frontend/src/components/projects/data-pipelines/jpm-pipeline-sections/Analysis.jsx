@@ -31,8 +31,8 @@ export const Analysis = () => {
           </p>
           <p>
             The first period has no prior reference, while subsequent rows expose
-            both absolute (YoY Change) and relative (YoY %) movement - making
-            trend detection immediate.
+            both absolute (YoY Change) and relative (YoY %) movement, which helps
+            to immediately identify trends.
           </p>
         </div>
       </div>
@@ -50,7 +50,8 @@ export const Analysis = () => {
         <div className="jpm-analysis-text">
           <p>
             The chart surfaces not just growth, but the rate at which growth is
-            changing - revealing inflection points that raw values alone would hide.
+            changing - revealing crucial points and trends that raw values alone 
+            would usually hide.
           </p>
           <p>Key findings from this analysis:</p>
           <ul className="jpm-analysis-list">

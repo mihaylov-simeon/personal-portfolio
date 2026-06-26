@@ -3,8 +3,8 @@ const decisions = [
     num: "01",
     title: "inferSchema=False - Controlled Ingestion Contract",
     p: [
-      "CSV data types cannot be trusted. Disabling schema inference forces every column to be declared explicitly, preventing Spark from silently assigning wrong types based on assumptions.",
-      "This makes the pipeline deterministic from the very first read - column types are part of the contract, not a side-effect of the data.",
+      "CSV data types cannot be trusted. Disabling schema inference forces every column to be declared explicitly, which prevents Spark from silently assigning wrong types based on assumptions.",
+      "This makes the pipeline deterministic from the very first read - column types are part of the defined schema.",
     ],
     bullets: [
       "Prevents silent type coercion at ingest time",
@@ -30,7 +30,7 @@ const decisions = [
     title: "coalesce Over repartition Before Writes",
     p: [
       "repartition triggers a full shuffle, causing OutOfMemory exceptions when writing large data loads. coalesce merges partitions in-place without shuffling, reducing output file count while keeping memory pressure flat.",
-      "For analytical ETL pipelines where output is read sequentially, fewer files with predictable size outperforms many small fragments.",
+      "For analytical ETL pipelines where output is read sequentially, fewer files with predictable size outperforms the opposite.",
     ],
     bullets: [
       "No full shuffle - memory pressure stays flat",
@@ -42,7 +42,7 @@ const decisions = [
     num: "04",
     title: "Explicit Casting + UPPER_CASE Aliasing in Silver",
     p: [
-      "Every column is cast and renamed within the Silver layer. All Gold pipelines inherit a type-safe and consistently named contract - no implicit coercion and no schema drift downstream.",
+      "Every column is cast and renamed within the Silver layer. All Gold pipelines inherit a type-safe and consistently named contract, ensuring no schema drift downstream.",
       "Centralising this in Silver means Gold pipelines never need to defensively re-cast or re-alias. The contract is a guarantee, not an assumption.",
     ],
     bullets: [
@@ -55,21 +55,21 @@ const decisions = [
     num: "05",
     title: "Null Safety Before Every Arithmetic Operation",
     p: [
-      "when(col().isNull() | (col() == 0), None).otherwise(...) guards every derived metric. Dividends are absent for most days; earnings appear quarterly - without explicit null guards, aggregations will be corrupted.",
-      "This is not defensive programming - it is the correct model for sparse financial data. Null and zero have fundamentally different business meanings.",
+      "when(col().isNull() | (col() == 0), None).otherwise(...) guards every derived metric. Dividends are absent for most days; earnings appear quarterly - without explicit null guards, aggregations will be corrupted by missing data.",
+      "This is a deliberate design decision for providing accurate financial darta. Null and zero have fundamentally different business meanings.",
     ],
     bullets: [
       "Null and zero treated as distinct states",
       "Guards every division and window-based metric",
-      "Prevents aggregation corruption in Gold pipelines",
+      "Prevents the corruption of aggreagated data due to missing values in Gold pipelines",
     ],
   },
   {
     num: "06",
     title: "Inter-Gold Dependency Between Pipelines",
     p: [
-      "Rather than recomputing the same columns from Silver again, later Gold pipelines reuse already-materialised Gold outputs as inputs. Windowing logic is not duplicated.",
-      "This makes the Gold layer a dependency graph, not a set of independent queries. Later pipelines consume earlier Gold outputs, enabling richer signal composition without rebuilding metrics from scratch.",
+      "Rather than recomputing the same columns from Silver again, later Gold pipelines reuse already-calculated Gold outputs as inputs. Windowing logic is not duplicated.",
+      "This makes the Gold layer a dependency graph, not just a set of independent pipelines. Later pipelines consume earlier Gold outputs, enabling smarter composition without rebuilding metrics from scratch.",
     ],
     bullets: [
       "Gold outputs consumed as inputs by later Gold pipelines",

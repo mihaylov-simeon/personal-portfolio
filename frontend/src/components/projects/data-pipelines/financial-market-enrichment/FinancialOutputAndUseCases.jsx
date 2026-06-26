@@ -16,7 +16,7 @@ const DataTable = ({ headers, rows }) => (
 const outputs = [
   {
     title: "Gap & Intraday Volatility Screening",
-    description: "Calculates how much a stock jumps when the market is closed and how wide each session trades compared to its 20-day baseline. Used to identify abnormal trading sessions for gap trading and volatility breakout strategies.",
+    description: "Calculates how much a stock jumps when the market is closed and how wide each session trades compared to its 20-day baseline. Used to identify abnormal trading sessions for gap trading and trading strategies.",
     headers: ['SYMBOL', 'DATE', 'GAP_AMOUNT', 'GAP_DIRECTION', 'INTRADAY_RANGE_PCT', '20D_AVG_RANGE_PCT'],
     rows: [
       ['AACG', '2008-01-30', '0.0', 'NO_GAP', '9.9990', '16.2285'],
@@ -25,7 +25,7 @@ const outputs = [
   },
   {
     title: "Volume & Liquidity Analysis",
-    description: "Measures daily volume against 5 and 20-day rolling averages to determine whether participation is spiking or drying up. Used to confirm whether a price move is backed by real trading activity or is low-conviction.",
+    description: "Measures daily volume against 5 and 20-day rolling averages to determine whether participation is spiking or drying up. Used to confirm whether a price move is backed by real trading activity.",
     headers: ['SYMBOL', 'DATE', 'PREV_VOLUME', 'VOL_CHANGE_PCT', 'VOL_DIRECTION', '5D_AVG_VOL', '20D_AVG_VOL'],
     rows: [
       ['AA', '2016-11-02', '32,216,510', '-66.61', 'DOWN', '3.221E7', '3.221E7'],
@@ -70,7 +70,7 @@ const outputs = [
   },
   {
     title: "Market Breadth as a Filter Layer",
-    description: "Instead of asking \"is the index up today?\", this pipeline asks what percentage of all stocks are up. If only 20% are rising but the index is up, it is being pulled by large-caps - the market is not broadly healthy. Used to determine whether long signals should be taken at all on a given day.",
+    description: "Instead of asking \"is the index up today?\", this pipeline asks \"what percentage of all stocks are up?\". If only 20% are rising but the index is up, it is being pulled by large-caps - the market is not very healthy. Used to determine whether long signals should be taken at all on a given day.",
     headers: ['DATE', 'TOTAL_STOCKS', 'PCT_UP', 'PCT_DOWN', 'AVG_VOLATILITY', 'BREADTH_REGIME'],
     rows: [
       ['2000-01-26', '2338', '0.4345', '0.4110', '4.7346', 'NEUTRAL'],

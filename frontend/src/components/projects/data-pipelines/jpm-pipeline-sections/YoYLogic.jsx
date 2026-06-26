@@ -4,7 +4,8 @@ const chapters = [
     title: "Previous Transaction Amount",
     paragraphs: [
       "Accurate YoY calculation requires each transaction to be evaluated based on its immediate predecessor within the same business category.",
-      "A deterministic window is applied to partition data by category and order transactions by date. This allows each record to reference the prior transaction value without aggregation or loss of granularity.",
+      "A deterministic window is applied to partition data by category and ordered transactions by date. ",
+      "This allows each record to reference the prior transaction value without aggregation or loss of granularity.",
     ],
     bullets: [
       "Time-ordered transactions per business category",
@@ -17,7 +18,7 @@ const chapters = [
     num: "05",
     title: "YoY Absolute Change",
     paragraphs: [
-      "With the previous transaction value established, the absolute YoY change captures the raw magnitude and direction of movement between reporting periods.",
+      "With the previous transaction value established, the absolute YoY change captures the magnitude and direction of movement between reporting periods.",
       "This metric represents the numerical difference between consecutive values - providing a direct view of growth or decline without normalization.",
     ],
     bullets: [

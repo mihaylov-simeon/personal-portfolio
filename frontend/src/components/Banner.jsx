@@ -62,8 +62,9 @@ export const Banner = () => {
                   </h1>
 
                   <p>
-                    I design and build production-ready data pipelines using PySpark, streaming, and medallion architecture.
-                    Focused on transforming raw data into reliable, analytics-ready systems.
+                    I design and build production-ready and analytics-ready data pipelines using PySpark, streaming,
+                    and medallion architecture. Focused on elegantly solving real-world data problems with clean code
+                    and smart solutions.
                   </p>
 
                   <a href="#projects">
